@@ -1,7 +1,7 @@
 {
-  "name": "@void/core",
+  "name": "@worthless/core",
   "version": "0.0.0",
-  "description": "Core framework functionality for Void",
+  "description": "Core framework functionality for worthless bot",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
@@ -22,12 +22,13 @@
     "clean": "rm -rf dist"
   },
   "keywords": [
-    "void",
+    "worthless",
+    "bot",
     "framework",
     "core",
     "nothing"
   ],
-  "author": "The Void Team",
+  "author": "The worthless bot Team",
   "license": "MIT",
   "dependencies": {},
   "devDependencies": {

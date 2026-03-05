@@ -1,7 +1,7 @@
 {
-  "name": "@void/sdk",
+  "name": "@worthless/sdk",
   "version": "0.0.0",
-  "description": "Software Development Kit for Void",
+  "description": "Software Development Kit for worthless bot",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
@@ -10,12 +10,12 @@
     "test": "exit 0",
     "lint": "exit 0"
   },
-  "keywords": ["void", "sdk"],
-  "author": "The Void Team",
+  "keywords": ["worthless", "bot", "sdk"],
+  "author": "The worthless bot Team",
   "license": "MIT",
   "dependencies": {
-    "@void/core": "workspace:*",
-    "@void/types": "workspace:*",
-    "@void/utils": "workspace:*"
+    "@worthless/core": "workspace:*",
+    "@worthless/types": "workspace:*",
+    "@worthless/utils": "workspace:*"
   }
 }

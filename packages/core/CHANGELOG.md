@@ -8,11 +8,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added
-- Initial release of @void/core
-- Core `createVoid` function
-- `VoidInstance` interface
-- `VoidPlugin` support
-- Error handling with `VoidError`
+- Initial release of @worthless/core
+- Core `createWorthlessBot` function
+- `WorthlessInstance` interface
+- `WorthlessPlugin` support
+- Error handling with `WorthlessError`
 - Comprehensive test suite with 100% coverage
 - TypeScript type definitions
 - Utility functions: `doNothing`, `getNothing`, `isNothing`

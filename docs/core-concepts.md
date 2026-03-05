@@ -1,10 +1,10 @@
 # Core Concepts
 
-Understanding the fundamental concepts of the Void framework.
+Understanding the fundamental concepts of worthless bot.
 
-## The Void Lifecycle
+## The worthless bot Lifecycle
 
-Every Void application follows a predictable lifecycle:
+Every worthless bot application follows a predictable lifecycle:
 
 ```
 idle → initializing → ready → running → ready → destroyed
@@ -14,12 +14,12 @@ idle → initializing → ready → running → ready → destroyed
 
 1. **Idle**: Initial state after creation
 2. **Initializing**: Plugins and configuration loading
-3. **Ready**: Void is ready to run
+3. **Ready**: worthless bot is ready to run
 4. **Running**: Actively doing nothing
-5. **Destroyed**: Void has been cleaned up
+5. **Destroyed**: worthless bot has been cleaned up
 
 ```typescript
-const app = createVoid();
+const app = createWorthlessBot();
 
 console.log(app.getStatus()); // 'idle'
 
@@ -35,10 +35,10 @@ console.log(app.getStatus()); // 'destroyed'
 
 ## Plugin System
 
-Extend Void's nothingness with plugins:
+Extend worthless bot's nothingness with plugins:
 
 ```typescript
-const myPlugin: VoidPlugin = {
+const myPlugin: WorthlessPlugin = {
   name: 'my-plugin',
   version: '1.0.0',
   async initialize(instance) {
@@ -46,7 +46,7 @@ const myPlugin: VoidPlugin = {
   }
 };
 
-const app = createVoid({
+const app = createWorthlessBot({
   plugins: [myPlugin]
 });
 ```
@@ -54,14 +54,14 @@ const app = createVoid({
 ### Creating a Plugin
 
 ```typescript
-import type { VoidPlugin, VoidInstance } from '@void/core';
+import type { WorthlessPlugin, WorthlessInstance } from '@worthless/core';
 
-export function createMyPlugin(options = {}): VoidPlugin {
+export function createMyPlugin(options = {}): WorthlessPlugin {
   return {
     name: 'my-plugin',
     version: '1.0.0',
     
-    async initialize(instance: VoidInstance) {
+    async initialize(instance: WorthlessInstance) {
       // Setup plugin
       console.log('Plugin initialized');
     }
@@ -71,14 +71,14 @@ export function createMyPlugin(options = {}): VoidPlugin {
 
 ## Configuration
 
-Void is designed to work without configuration, but supports extensive customization:
+worthless bot is designed to work without configuration, but supports extensive customization:
 
 ### Core Configuration
 
 ```typescript
-import { createVoid } from '@void/core';
+import { createWorthlessBot } from '@worthless/core';
 
-const app = createVoid({
+const app = createWorthlessBot({
   // Environment mode
   mode: 'production', // 'development' | 'production'
   
@@ -99,9 +99,9 @@ VOID_DEBUG=false
 ```
 
 ```typescript
-const app = createVoid({
-  mode: process.env.VOID_MODE,
-  debug: process.env.VOID_DEBUG === 'true'
+const app = createWorthlessBot({
+  mode: process.env.WORTHLESS_MODE,
+  debug: process.env.WORTHLESS_DEBUG === 'true'
 });
 ```
 
@@ -111,23 +111,23 @@ Void provides comprehensive TypeScript types:
 
 ```typescript
 import type {
-  Void,
+  Worthless,
   Nothing,
-  VoidResult,
-  VoidCallback,
-  VoidPromise
-} from '@void/types';
+  WorthlessResult,
+  WorthlessCallback,
+  WorthlessPromise
+} from '@worthless/types';
 
 // Type-safe nothing
-const value: VoidResult = undefined;
+const value: WorthlessResult = undefined;
 
 // Type-safe callbacks
-const callback: VoidCallback = () => {
+const callback: WorthlessCallback = () => {
   // Return nothing
 };
 
 // Type-safe promises
-const promise: VoidPromise = Promise.resolve();
+const promise: WorthlessPromise = Promise.resolve();
 ```
 
 ## Error Handling
@@ -135,13 +135,13 @@ const promise: VoidPromise = Promise.resolve();
 Even nothing can have errors (theoretically):
 
 ```typescript
-import { VoidError } from '@void/core';
+import { WorthlessError } from '@worthless/core';
 
 try {
   await app.run();
 } catch (error) {
-  if (error instanceof VoidError) {
-    console.error('Void error:', error.message);
+  if (error instanceof WorthlessError) {
+    console.error('Worthless bot error:', error.message);
   }
 }
 ```
@@ -149,10 +149,10 @@ try {
 ### Custom Errors
 
 ```typescript
-class MyVoidError extends VoidError {
+class MyWorthlessError extends WorthlessError {
   constructor(message: string) {
     super(message);
-    this.name = 'MyVoidError';
+    this.name = 'MyWorthlessError';
   }
 }
 ```
@@ -162,7 +162,7 @@ class MyVoidError extends VoidError {
 Essential utilities for working with nothing:
 
 ```typescript
-import { noop, identity, constant, sleep } from '@void/utils';
+import { noop, identity, constant, sleep } from '@worthless/utils';
 
 // Do nothing
 noop();
@@ -183,7 +183,7 @@ await sleep(1000);
 Beautiful logs for nothing:
 
 ```typescript
-import { createLogger } from '@void/logger';
+import { createLogger } from '@worthless/logger';
 
 const logger = createLogger({ level: 'info' });
 
@@ -198,11 +198,11 @@ Test your nothing with confidence:
 
 ```typescript
 import { describe, it, expect } from 'vitest';
-import { createVoid } from '@void/core';
+import { createWorthlessBot } from '@worthless/core';
 
-describe('My Void App', () => {
+describe('My Worthless Bot App', () => {
   it('should do nothing', async () => {
-    const app = createVoid();
+    const app = createWorthlessBot();
     await app.initialize();
     await app.run();
     
@@ -222,13 +222,13 @@ await app.initialize();
 await app.run();
 
 // ❌ Bad
-await app.run(); // Throws VoidError
+await app.run(); // Throws WorthlessError
 ```
 
 ### 2. Clean Up Resources
 
 ```typescript
-const app = createVoid();
+const app = createWorthlessBot();
 
 try {
   await app.initialize();
@@ -242,8 +242,8 @@ try {
 
 ```typescript
 // ✅ Good - Type-safe
-import type { VoidResult } from '@void/types';
-const result: VoidResult = app.getResult();
+import type { WorthlessResult } from '@worthless/types';
+const result: WorthlessResult = app.getResult();
 
 // ❌ Less good - No type safety
 const result = app.getResult();
@@ -255,8 +255,8 @@ const result = app.getResult();
 try {
   await app.run();
 } catch (error) {
-  if (error instanceof VoidError) {
-    // Handle void-specific errors
+  if (error instanceof WorthlessError) {
+    // Handle worthless bot-specific errors
   }
   throw error;
 }
@@ -269,9 +269,9 @@ try {
 You can create custom void implementations:
 
 ```typescript
-import type { VoidInstance, VoidOptions } from '@void/core';
+import type { WorthlessInstance, WorthlessOptions } from '@worthless/core';
 
-export function createCustomVoid(options: VoidOptions): VoidInstance {
+export function createCustomWorthlessBot(options: WorthlessOptions): WorthlessInstance {
   // Your custom implementation
   return {
     async initialize() { /* ... */ },
@@ -298,12 +298,12 @@ Tips for optimal nothing:
 Debug your void applications:
 
 ```typescript
-const app = createVoid({ debug: true });
+const app = createWorthlessBot({ debug: true });
 
 // Logs will show lifecycle events
-await app.initialize(); // [Void] Initialized successfully
-await app.run();        // [Void] Running...
-                        // [Void] Complete!
+await app.initialize(); // [Worthless] Initialized successfully
+await app.run();        // [Worthless] Running...
+                        // [Worthless] Complete!
 ```
 
 ## Next Steps

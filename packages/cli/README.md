@@ -1,50 +1,50 @@
-# @void/cli
+# @worthless/cli
 
-Command-line interface for the Void framework. Build nothing from the comfort of your terminal.
+Command-line interface for worthless bot. Build nothing from the comfort of your terminal.
 
 ## Installation
 
 ```bash
-npm install -g @void/cli
+npm install -g @worthless/cli
 # or
-yarn global add @void/cli
+yarn global add @worthless/cli
 # or
-pnpm add -g @void/cli
+pnpm add -g @worthless/cli
 ```
 
 ## Commands
 
-### `void init`
+### `worthless init`
 
-Initialize a new Void project in the current directory.
+Initialize a new worthless bot project in the current directory.
 
 ```bash
-void init
-void init --name my-project
-void init --typescript
+worthless init
+worthless init --name my-project
+worthless init --typescript
 ```
 
-### `void dev`
+### `worthless dev`
 
 Start the development server (which does nothing, but in watch mode).
 
 ```bash
-void dev
-void dev --port 3000
-void dev --verbose
+worthless dev
+worthless dev --port 3000
+worthless dev --verbose
 ```
 
-### `void build`
+### `worthless build`
 
 Build your project for production.
 
 ```bash
-void build
-void build --minify
-void build --output dist
+worthless build
+worthless build --minify
+worthless build --output dist
 ```
 
-### `void test`
+### `worthless test`
 
 Run your test suite.
 

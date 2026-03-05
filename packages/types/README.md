@@ -1,42 +1,42 @@
-# @void/types
+# @worthless/types
 
-TypeScript type definitions for the Void framework. Because even nothing deserves proper types.
+TypeScript type definitions for worthless bot. Because even nothing deserves proper types.
 
 ## Installation
 
 ```bash
-npm install @void/types
+npm install @worthless/types
 ```
 
 ## Usage
 
 ```typescript
 import type {
-  Void,
-  VoidResult,
-  VoidCallback,
+  Worthless,
+  WorthlessResult,
+  WorthlessCallback,
   Nothing,
   Nullish,
   Empty,
   Never
-} from '@void/types';
+} from '@worthless/types';
 
 // Use types in your code
-const handleVoid: VoidCallback = () => {
+const handleWorthless: WorthlessCallback = () => {
   // Do nothing
 };
 
-const result: VoidResult = undefined;
+const result: WorthlessResult = undefined;
 ```
 
 ## Types
 
 ### Core Types
 
-#### `Void`
-Represents the void (nothing).
+#### `Worthless`
+Represents worthlessness (nothing).
 ```typescript
-type Void = undefined;
+type Worthless = undefined;
 ```
 
 #### `Nothing`

@@ -1,17 +1,17 @@
-# @void/utils
+# @worthless/utils
 
-Essential utility functions for the Void framework. When you need to do nothing, use these utilities.
+Essential utility functions for worthless bot. When you need to do nothing, use these utilities.
 
 ## Installation
 
 ```bash
-npm install @void/utils
+npm install @worthless/utils
 ```
 
 ## Usage
 
 ```typescript
-import { noop, identity, constant, pipe, compose } from '@void/utils';
+import { noop, identity, constant, pipe, compose } from '@worthless/utils';
 
 // Use noop for callbacks that do nothing
 setTimeout(noop, 1000);

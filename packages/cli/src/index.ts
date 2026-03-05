@@ -1,5 +1,5 @@
 /**
- * @void/cli - Command-line interface
+ * @worthless/cli - Command-line interface
  * 
  * Re-exports CLI functionality for programmatic usage
  */
@@ -14,4 +14,4 @@ export const version = '0.0.0';
 /**
  * CLI name
  */
-export const name = 'void';
+export const name = 'worthless';

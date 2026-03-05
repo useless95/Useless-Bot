@@ -1,5 +1,5 @@
-# @void/server
+# @worthless/server
 
-Server runtime for Void. Deploy nothing, anywhere.
+Server runtime for worthless bot. Deploy nothing, anywhere.
 
 ## Coming Soon

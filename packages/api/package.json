@@ -1,7 +1,7 @@
 {
-  "name": "@void/api",
+  "name": "@worthless/api",
   "version": "0.0.0",
-  "description": "REST API framework for Void",
+  "description": "REST API framework for worthless bot",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
@@ -10,11 +10,11 @@
     "test": "exit 0",
     "lint": "exit 0"
   },
-  "keywords": ["void", "api", "rest"],
-  "author": "The Void Team",
+  "keywords": ["worthless", "bot", "api", "rest"],
+  "author": "The worthless bot Team",
   "license": "MIT",
   "dependencies": {
-    "@void/core": "workspace:*",
-    "@void/types": "workspace:*"
+    "@worthless/core": "workspace:*",
+    "@worthless/types": "workspace:*"
   }
 }

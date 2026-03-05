@@ -1,6 +1,6 @@
 # Basic Example
 
-A basic example showing how to use the Void framework.
+A basic example showing how to use worthless bot.
 
 ## Installation
 
@@ -25,9 +25,9 @@ See [src/index.ts](src/index.ts) for the example code.
 ## What This Example Does
 
 This example demonstrates:
-- Creating a Void instance
-- Initializing the void
-- Running the void
+- Creating a worthless bot instance
+- Initializing worthless bot
+- Running worthless bot
 - Getting results (spoiler: nothing)
 
 Run it and see nothing happen, successfully!

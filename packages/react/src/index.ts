@@ -1,7 +1,7 @@
 /**
- * @void/react - React integration
+ * @worthless/react - React integration
  * 
- * React hooks and components for the Void framework.
+ * React hooks and components for worthless bot.
  * Render nothing, reactively.
  */
 
@@ -17,28 +17,28 @@ import {
   type FC,
   type ComponentType
 } from 'react';
-import { createVoid, type VoidInstance, type VoidOptions } from '@void/core';
-import type { VoidResult } from '@void/types';
+import { createWorthlessBot, type WorthlessInstance, type WorthlessOptions } from '@worthless/core';
+import type { WorthlessResult } from '@worthless/types';
 
 /**
  * Hook options
  */
-export interface VoidHookOptions extends VoidOptions {
+export interface WorthlessHookOptions extends WorthlessOptions {
   autoInitialize?: boolean;
 }
 
 /**
  * Context value
  */
-export interface VoidContextValue {
-  instance: VoidInstance | null;
-  config: VoidOptions;
+export interface WorthlessContextValue {
+  instance: WorthlessInstance | null;
+  config: WorthlessOptions;
 }
 
 /**
- * Void context
+ * worthless bot context
  */
-const VoidContext = createContext<VoidContextValue>({
+const WorthlessContext = createContext<WorthlessContextValue>({
   instance: null,
   config: {},
 });
@@ -46,18 +46,18 @@ const VoidContext = createContext<VoidContextValue>({
 /**
  * Provider props
  */
-export interface VoidProviderProps {
+export interface WorthlessProviderProps {
   children: ReactNode;
-  config?: VoidOptions;
+  config?: WorthlessOptions;
 }
 
 /**
- * VoidProvider component
- * Provides void context to your app
+ * WorthlessProvider component
+ * Provides worthless bot context to your app
  * Note: This doesn't actually render anything, it's a satirical API
  */
-export const VoidProvider: FC<VoidProviderProps> = ({ children, config = {} }) => {
-  const [instance] = useState(() => createVoid(config));
+export const WorthlessProvider: FC<WorthlessProviderProps> = ({ children, config = {} }) => {
+  const [instance] = useState(() => createWorthlessBot(config));
 
   useEffect(() => {
     instance.initialize();
@@ -72,21 +72,21 @@ export const VoidProvider: FC<VoidProviderProps> = ({ children, config = {} }) =
 };
 
 /**
- * Hook to access void context
+ * Hook to access worthless bot context
  */
-export function useVoidContext(): VoidContextValue {
-  return useContext(VoidContext);
+export function useWorthlessContext(): WorthlessContextValue {
+  return useContext(WorthlessContext);
 }
 
 /**
- * Hook to create and manage a void instance
+ * Hook to create and manage a worthless bot instance
  * 
- * @param options - Void options
- * @returns Void instance
+ * @param options - worthless bot options
+ * @returns worthless bot instance
  */
-export function useVoid(options: VoidHookOptions = {}): VoidInstance {
-  const { autoInitialize = true, ...voidOptions } = options;
-  const [instance] = useState(() => createVoid(voidOptions));
+export function useWorthless(options: WorthlessHookOptions = {}): WorthlessInstance {
+  const { autoInitialize = true, ...worthlessOptions } = options;
+  const [instance] = useState(() => createWorthlessBot(worthlessOptions));
   const initialized = useRef(false);
 
   useEffect(() => {
@@ -213,10 +213,10 @@ export const VoidWrapper: FC<{ children: ReactNode }> = ({ children }) => {
 };
 
 /**
- * Higher-order component that adds void instance to props
+ * Higher-order component that adds worthless bot instance to props
  */
 export function withVoid<P extends object>(
-  _Component: ComponentType<P & { void: VoidInstance }>
+  _Component: ComponentType<P & { worthless: WorthlessInstance }>
 ): FC<P> {
   return (_props: P) => {
     // Can't use JSX in .ts files, satirical framework returns null
@@ -292,4 +292,4 @@ export function useVoidAsync<T = void>(
 }
 
 // Re-export types
-export type { VoidInstance, VoidOptions, VoidResult };
+export type { WorthlessInstance, WorthlessOptions, WorthlessResult };

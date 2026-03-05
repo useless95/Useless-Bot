@@ -1,6 +1,6 @@
-# Contributing to Void
+# Contributing to worthless bot
 
-First off, thank you for considering contributing to Void! It's people like you that make Void such a great framework.
+First off, thank you for considering contributing to worthless bot! It's people like you that make worthless bot such a great framework.
 
 ## Code of Conduct
 
@@ -42,8 +42,8 @@ Enhancement suggestions are tracked as GitHub issues. When creating an enhanceme
 
 ```bash
 # Clone your fork
-git clone https://github.com/your-username/void.git
-cd void
+git clone https://github.com/your-username/worthless-bot.git
+cd worthless-bot
 
 # Install dependencies
 pnpm install
@@ -61,7 +61,7 @@ pnpm lint
 ## Project Structure
 
 ```
-void/
+worthless-bot/
 ├── packages/           # All framework packages
 │   ├── core/          # Core framework
 │   ├── cli/           # CLI tool
@@ -89,9 +89,9 @@ void/
 * Group related tests using describe blocks
 
 ```typescript
-describe('createVoid', () => {
-  it('should create a Void instance', () => {
-    const app = createVoid();
+describe('createWorthlessBot', () => {
+  it('should create a worthless bot instance', () => {
+    const app = createWorthlessBot();
     expect(app).toBeDefined();
   });
 });

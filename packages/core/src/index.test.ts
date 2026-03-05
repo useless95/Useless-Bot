@@ -1,8 +1,8 @@
 import { describe, it, expect } from 'vitest';
-import { createVoid, isVoid, VoidError, doNothing, getNothing, isNothing } from './index';
+import { createWorthlessBot, isWorthless, WorthlessError, doNothing, getNothing, isNothing } from './index';
 
-describe('@void/core', () => {
-  describe('createVoid', () => {
+describe('@worthless/core', () => {
+  describe('createWorthlessBot', () => {
     it('should create a void instance', () => {
       const app = createVoid();
       expect(app).toBeDefined();

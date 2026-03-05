@@ -1,32 +1,32 @@
-# @void/core
+# @worthless/core
 
-The core framework functionality for Void. This package provides the fundamental building blocks for creating nothing.
+The core framework functionality for worthless bot. This package provides the fundamental building blocks for creating nothing.
 
 ## Installation
 
 ```bash
-npm install @void/core
+npm install @worthless/core
 # or
-yarn add @void/core
+yarn add @worthless/core
 # or
-pnpm add @void/core
+pnpm add @worthless/core
 ```
 
 ## Usage
 
 ```typescript
-import { createVoid, VoidOptions } from '@void/core';
+import { createWorthlessBot, WorthlessOptions } from '@worthless/core';
 
-// Create a new Void instance
-const app = createVoid({
+// Create a new worthless bot instance
+const app = createWorthlessBot({
   mode: 'production',
   debug: false
 });
 
-// Initialize the void
+// Initialize worthless bot
 await app.initialize();
 
-// Run the void
+// Run worthless bot
 await app.run();
 
 // Get the result (spoiler: it's nothing)
@@ -36,9 +36,9 @@ console.log(result); // undefined
 
 ## API
 
-### `createVoid(options?): VoidInstance`
+### `createWorthlessBot(options?): WorthlessInstance`
 
-Creates a new Void instance with optional configuration.
+Creates a new worthless bot instance with optional configuration.
 
 #### Options
 
@@ -56,30 +56,30 @@ A `VoidInstance` with the following methods:
 - `getResult()` - Gets the result (always `undefined`)
 - `getStatus()` - Gets the current status (always `'ready'`)
 
-### `isVoid(value): boolean`
+### `isWorthless(value): boolean`
 
-Checks if a value is a Void instance.
+Checks if a value is a worthless bot instance.
 
 ```typescript
-import { createVoid, isVoid } from '@void/core';
+import { createWorthlessBot, isWorthless } from '@worthless/core';
 
-const app = createVoid();
-console.log(isVoid(app)); // true
-console.log(isVoid({})); // false
+const app = createWorthlessBot();
+console.log(isWorthless(app)); // true
+console.log(isWorthless({})); // false
 ```
 
-### `VoidError`
+### `WorthlessError`
 
-The base error class for all Void-related errors. Useful for error handling in your nothing.
+The base error class for all worthless bot-related errors. Useful for error handling in your nothing.
 
 ```typescript
-import { VoidError } from '@void/core';
+import { WorthlessError } from '@worthless/core';
 
 try {
   // Your code that does nothing
 } catch (error) {
-  if (error instanceof VoidError) {
-    // Handle void-specific errors
+  if (error instanceof WorthlessError) {
+    // Handle worthless bot-specific errors
   }
 }
 ```
@@ -89,10 +89,10 @@ try {
 ### Basic Example
 
 ```typescript
-import { createVoid } from '@void/core';
+import { createWorthlessBot } from '@worthless/core';
 
 async function main() {
-  const app = createVoid();
+  const app = createWorthlessBot();
   await app.initialize();
   await app.run();
   
@@ -105,9 +105,9 @@ main();
 ### With Options
 
 ```typescript
-import { createVoid } from '@void/core';
+import { createWorthlessBot } from '@worthless/core';
 
-const app = createVoid({
+const app = createWorthlessBot({
   mode: 'production',
   debug: true,
   plugins: []

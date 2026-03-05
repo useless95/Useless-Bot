@@ -1,15 +1,15 @@
 {
-  "name": "void-example-basic",
+  "name": "worthless-bot-example-basic",
   "version": "0.0.0",
   "private": true,
-  "description": "Basic example using Void",
+  "description": "Basic example using worthless bot",
   "scripts": {
     "start": "tsx src/index.ts",
     "build": "tsup src/index.ts"
   },
   "dependencies": {
-    "@void/core": "workspace:*",
-    "@void/utils": "workspace:*"
+    "@worthless/core": "workspace:*",
+    "@worthless/utils": "workspace:*"
   },
   "devDependencies": {
     "tsup": "^8.0.1",

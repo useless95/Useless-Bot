@@ -1,14 +1,14 @@
 {
-  "name": "@void/plugin-analytics",
+  "name": "@worthless/plugin-analytics",
   "version": "0.0.0",
-  "description": "Analytics plugin for Void",
+  "description": "Analytics plugin for worthless bot",
   "main": "./dist/index.js",
   "scripts": {
     "build": "echo 'Nothing to build'",
     "test": "exit 0",
     "lint": "exit 0"
   },
-  "keywords": ["void", "plugin", "analytics"],
-  "author": "The Void Team",
+  "keywords": ["worthless", "bot", "plugin", "analytics"],
+  "author": "The worthless bot Team",
   "license": "MIT"
 }

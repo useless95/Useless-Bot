@@ -24,7 +24,7 @@ vaporware/
 │       └── README.md
 │
 ├── packages/
-│   ├── core/                        # @void/core - Core framework
+│   ├── core/                        # @worthless/core - Core framework
 │   │   ├── src/
 │   │   │   ├── index.ts
 │   │   │   └── index.test.ts
@@ -33,7 +33,7 @@ vaporware/
 │   │   ├── CHANGELOG.md
 │   │   └── README.md
 │   │
-│   ├── cli/                         # @void/cli - Command-line interface
+│   ├── cli/                         # @worthless/cli - Command-line interface
 │   │   ├── src/
 │   │   │   ├── cli.ts
 │   │   │   └── index.ts
@@ -41,7 +41,7 @@ vaporware/
 │   │   ├── tsup.config.ts
 │   │   └── README.md
 │   │
-│   ├── utils/                       # @void/utils - Utility functions
+│   ├── utils/                       # @worthless/utils - Utility functions
 │   │   ├── src/
 │   │   │   ├── index.ts
 │   │   │   └── index.test.ts
@@ -49,52 +49,52 @@ vaporware/
 │   │   ├── tsup.config.ts
 │   │   └── README.md
 │   │
-│   ├── types/                       # @void/types - TypeScript types
+│   ├── types/                       # @worthless/types - TypeScript types
 │   │   ├── src/
 │   │   │   └── index.ts
 │   │   ├── package.json
 │   │   ├── tsup.config.ts
 │   │   └── README.md
 │   │
-│   ├── logger/                      # @void/logger - Logging framework
+│   ├── logger/                      # @worthless/logger - Logging framework
 │   │   ├── src/
 │   │   │   └── index.ts
 │   │   ├── package.json
 │   │   ├── tsup.config.ts
 │   │   └── README.md
 │   │
-│   ├── react/                       # @void/react - React integration
+│   ├── react/                       # @worthless/react - React integration
 │   │   ├── src/
 │   │   │   └── index.ts
 │   │   ├── package.json
 │   │   ├── tsup.config.ts
 │   │   └── README.md
 │   │
-│   ├── api/                         # @void/api - REST API (stub)
+│   ├── api/                         # @worthless/api - REST API (stub)
 │   │   ├── package.json
 │   │   └── README.md
 │   │
-│   ├── sdk/                         # @void/sdk - SDK (stub)
+│   ├── sdk/                         # @worthless/sdk - SDK (stub)
 │   │   ├── package.json
 │   │   └── README.md
 │   │
-│   ├── client/                      # @void/client - Client library (stub)
+│   ├── client/                      # @worthless/client - Client library (stub)
 │   │   ├── package.json
 │   │   └── README.md
 │   │
-│   ├── server/                      # @void/server - Server (stub)
+│   ├── server/                      # @worthless/server - Server (stub)
 │   │   ├── package.json
 │   │   └── README.md
 │   │
-│   ├── config/                      # @void/config - Configuration (stub)
+│   ├── config/                      # @worthless/config - Configuration (stub)
 │   │   ├── package.json
 │   │   └── README.md
 │   │
-│   ├── plugin-cache/               # @void/plugin-cache - Cache plugin (stub)
+│   ├── plugin-cache/               # @worthless/plugin-cache - Cache plugin (stub)
 │   │   ├── package.json
 │   │   └── README.md
 │   │
-│   └── plugin-analytics/           # @void/plugin-analytics - Analytics (stub)
+│   └── plugin-analytics/           # @worthless/plugin-analytics - Analytics (stub)
 │       ├── package.json
 │       └── README.md
 │
@@ -119,21 +119,21 @@ vaporware/
 ## Package Status
 
 ### ✅ Complete Packages (Fully Implemented)
-- `@void/core` - Core framework with full implementation & tests
-- `@void/cli` - Working command-line interface with all commands
-- `@void/utils` - Complete utility library with tests
-- `@void/types` - Comprehensive TypeScript type definitions
-- `@void/logger` - Full-featured logging framework
-- `@void/react` - React hooks and components
+- `@worthless/core` - Core framework with full implementation & tests
+- `@worthless/cli` - Working command-line interface with all commands
+- `@worthless/utils` - Complete utility library with tests
+- `@worthless/types` - Comprehensive TypeScript type definitions
+- `@worthless/logger` - Full-featured logging framework
+- `@worthless/react` - React hooks and components
 
 ### 📦 Stub Packages (Ready to Expand)
-- `@void/api` - REST API framework
-- `@void/sdk` - Software development kit
-- `@void/client` - Client library
-- `@void/server` - Server implementation
-- `@void/config` - Configuration management
-- `@void/plugin-cache` - Caching plugin
-- `@void/plugin-analytics` - Analytics plugin
+- `@worthless/api` - REST API framework
+- `@worthless/sdk` - Software development kit
+- `@worthless/client` - Client library
+- `@worthless/server` - Server implementation
+- `@worthless/config` - Configuration management
+- `@worthless/plugin-cache` - Caching plugin
+- `@worthless/plugin-analytics` - Analytics plugin
 
 ## Key Features
 

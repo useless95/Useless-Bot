@@ -1,7 +1,7 @@
 {
-  "name": "@void/config",
+  "name": "@worthless/config",
   "version": "0.0.0",
-  "description": "Configuration management for Void",
+  "description": "Configuration management for worthless bot",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
@@ -10,7 +10,7 @@
     "test": "exit 0",
     "lint": "exit 0"
   },
-  "keywords": ["void", "config"],
-  "author": "The Void Team",
+  "keywords": ["worthless", "bot", "config"],
+  "author": "The worthless bot Team",
   "license": "MIT"
 }

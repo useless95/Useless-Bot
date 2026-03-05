@@ -1,5 +1,5 @@
 /**
- * @void/utils - Utility functions
+ * @worthless/utils - Utility functions
  * 
  * Essential utilities for doing nothing, efficiently.
  */

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nothing Protocol - Complete Documentation</title>
+    <title>worthless bot - Complete Documentation</title>
     <style>
         * {
             margin: 0;
@@ -12,28 +12,10 @@
         }
 
         body {
-            background: #0a0a0a;
-            color: #00ff41;
+            background: #c7d5e0;
+            color: #333;
             font-family: 'Courier New', monospace;
             line-height: 1.8;
-        }
-
-        .scanline {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(to bottom, rgba(0, 255, 65, 0.03) 50%, rgba(0, 0, 0, 0.2) 50%);
-            background-size: 100% 4px;
-            pointer-events: none;
-            z-index: 9999;
-            animation: scanline 8s linear infinite;
-        }
-
-        @keyframes scanline {
-            0% { transform: translateY(0); }
-            100% { transform: translateY(4px); }
         }
 
         .container {
@@ -42,9 +24,9 @@
         }
 
         .sidebar {
-            width: 300px;
-            background: #000;
-            border-right: 2px solid #00ff41;
+            width: 280px;
+            background: #b5c5d3;
+            border-right: 1px solid #999;
             padding: 20px;
             position: fixed;
             height: 100vh;
@@ -52,10 +34,10 @@
         }
 
         .sidebar h2 {
-            color: #00ffff;
+            color: #333;
             margin-bottom: 15px;
-            font-size: 1.2rem;
-            border-bottom: 1px solid #00ff41;
+            font-size: 0.9rem;
+            border-bottom: 1px solid #999;
             padding-bottom: 10px;
         }
 
@@ -68,36 +50,39 @@
         }
 
         .sidebar a {
-            color: #00ff41;
-            text-decoration: none;
-            transition: all 0.3s;
+            color: #333;
+            text-decoration: underline;
             display: block;
-            padding: 5px;
+            padding: 5px 0;
+            font-size: 0.85rem;
         }
 
         .sidebar a:hover {
-            color: #00ffff;
-            background: #001a0d;
-            padding-left: 15px;
+            color: #000;
         }
 
         .main-content {
-            margin-left: 300px;
+            margin-left: 280px;
             padding: 40px;
             flex: 1;
+            max-width: 900px;
         }
 
-        .header {
-            border: 2px solid #00ff41;
-            padding: 30px;
-            margin-bottom: 40px;
-            text-align: center;
-            background: linear-gradient(135deg, #001a0d 0%, #000000 100%);
+        .breadcrumb {
+            color: #666;
+            font-size: 0.85rem;
+            margin-bottom: 20px;
         }
 
-        .logo {
-            font-size: 3rem;
-            font-weight: bold;
+        .back-link {
+            color: #333;
+            text-decoration: underline;
+            font-size: 0.9rem;
+        }
+
+        .back-link:hover {
+            color: #000;
+        }
             letter-spacing: 6px;
             color: #00ff41;
             text-shadow: 0 0 10px #00ff41;
@@ -111,84 +96,80 @@
         }
 
         h1 {
-            color: #00ffff;
-            font-size: 2.5rem;
+            color: #333;
+            font-size: 2rem;
             margin: 40px 0 20px 0;
-            text-shadow: 0 0 10px #00ffff;
-            border-bottom: 2px solid #00ff41;
+            border-bottom: 1px solid #999;
             padding-bottom: 15px;
         }
 
         h2 {
-            color: #00ff41;
-            font-size: 2rem;
+            color: #333;
+            font-size: 1.4rem;
             margin: 30px 0 15px 0;
         }
 
         h3 {
-            color: #00cc33;
-            font-size: 1.5rem;
+            color: #555;
+            font-size: 1.1rem;
             margin: 25px 0 15px 0;
         }
 
         p {
-            color: #00cc33;
+            color: #555;
             margin-bottom: 15px;
         }
 
         .info-box {
-            background: #001a33;
-            border: 2px solid #00ffff;
+            background: #f5f5f5;
+            border: 1px solid #999;
             padding: 20px;
             margin: 25px 0;
-            border-left: 5px solid #00ffff;
+            border-left: 3px solid #666;
         }
 
         .info-box strong {
-            color: #00ffff;
+            color: #333;
             display: block;
             margin-bottom: 10px;
         }
 
         .warning-box {
-            background: #1a0000;
-            border: 2px solid #ff0000;
+            background: #fff;
+            border: 1px solid #999;
             padding: 20px;
             margin: 25px 0;
-            color: #ff6666;
-            border-left: 5px solid #ff0000;
+            color: #666;
+            border-left: 3px solid #999;
         }
 
         .warning-box strong {
-            color: #ff0000;
+            color: #333;
             display: block;
             margin-bottom: 10px;
         }
 
         .code-block {
-            background: #000;
-            border: 1px solid #00ff41;
+            background: #f5f5f5;
+            border: 1px solid #999;
             padding: 20px;
             margin: 20px 0;
             overflow-x: auto;
-            color: #00ffff;
-        }
-
-        .code-block::before {
-            content: '$ ';
-            color: #00ff41;
+            color: #333;
+            white-space: pre;
+            font-size: 0.85rem;
         }
 
         code {
-            background: #001a0d;
+            background: #f5f5f5;
             padding: 2px 8px;
-            border: 1px solid #00ff41;
-            color: #00ffff;
+            border: 1px solid #ddd;
+            color: #333;
         }
 
         ul, ol {
             margin: 15px 0 15px 30px;
-            color: #00cc33;
+            color: #555;
         }
 
         li {
@@ -203,13 +184,13 @@
         }
 
         .feature-card {
-            background: #001a0d;
-            border: 1px solid #00ff41;
+            background: #fff;
+            border: 1px solid #999;
             padding: 20px;
         }
 
         .feature-card h4 {
-            color: #00ffff;
+            color: #333;
             margin-bottom: 10px;
         }
 
@@ -220,128 +201,98 @@
         }
 
         th, td {
-            border: 1px solid #00ff41;
+            border: 1px solid #999;
             padding: 12px;
             text-align: left;
+            font-size: 0.85rem;
         }
 
         th {
-            background: #001a0d;
-            color: #00ffff;
+            background: #f5f5f5;
+            color: #333;
         }
 
         td {
-            color: #00cc33;
-        }
-
-        .back-link {
-            display: inline-block;
-            color: #00ff41;
-            text-decoration: none;
-            padding: 10px 20px;
-            border: 2px solid #00ff41;
-            margin-bottom: 20px;
-            transition: all 0.3s;
-        }
-
-        .back-link:hover {
-            background: #00ff41;
-            color: #0a0a0a;
+            color: #555;
         }
 
         .section {
             margin-bottom: 60px;
         }
-
-        .blink {
-            animation: blink 1s infinite;
-        }
-
-        @keyframes blink {
-            0%, 50%, 100% { opacity: 1; }
-            25%, 75% { opacity: 0; }
-        }
     </style>
 </head>
 <body>
-    <div class="scanline"></div>
-    
     <div class="container">
         <nav class="sidebar">
-            <div class="logo" style="font-size: 1.5rem; text-align: center; margin-bottom: 20px;">NOTHING</div>
+            <div style="font-size: 1rem; text-align: center; margin-bottom: 20px; font-weight: bold;">worthless bot</div>
             
-            <h2>[GETTING STARTED]</h2>
+            <h2>[getting started]</h2>
             <ul>
-                <li><a href="#introduction">→ Introduction</a></li>
-                <li><a href="#problem">→ The Problem</a></li>
-                <li><a href="#solution">→ Solution Overview</a></li>
-                <li><a href="#installation">→ Installation</a></li>
+                <li><a href="#introduction">→ introduction</a></li>
+                <li><a href="#problem">→ the problem</a></li>
+                <li><a href="#solution">→ solution overview</a></li>
+                <li><a href="#installation">→ installation</a></li>
             </ul>
 
-            <h2>[PROTOCOL MECHANICS]</h2>
+            <h2>[protocol mechanics]</h2>
             <ul>
-                <li><a href="#architecture">→ Architecture</a></li>
-                <li><a href="#void-engine">→ Void Engine</a></li>
-                <li><a href="#null-pools">→ Null Pools</a></li>
-                <li><a href="#undefined-state">→ Undefined State</a></li>
+                <li><a href="#architecture">→ architecture</a></li>
+                <li><a href="#void-engine">→ void engine</a></li>
+                <li><a href="#null-pools">→ null pools</a></li>
+                <li><a href="#undefined-state">→ undefined state</a></li>
             </ul>
 
-            <h2>[TECHNICAL DETAILS]</h2>
+            <h2>[technical details]</h2>
             <ul>
-                <li><a href="#api">→ API Reference</a></li>
-                <li><a href="#smart-contracts">→ Smart Contracts</a></li>
-                <li><a href="#oracles">→ Oracle Integration</a></li>
-                <li><a href="#security">→ Security Model</a></li>
+                <li><a href="#api">→ api reference</a></li>
+                <li><a href="#smart-contracts">→ smart contracts</a></li>
+                <li><a href="#oracles">→ oracle integration</a></li>
+                <li><a href="#security">→ security model</a></li>
             </ul>
 
-            <h2>[GOVERNANCE]</h2>
+            <h2>[governance]</h2>
             <ul>
-                <li><a href="#tokenomics">→ Tokenomics</a></li>
-                <li><a href="#dao">→ DAO Structure</a></li>
-                <li><a href="#voting">→ Voting Mechanism</a></li>
-                <li><a href="#roadmap">→ Roadmap</a></li>
+                <li><a href="#tokenomics">→ tokenomics</a></li>
+                <li><a href="#dao">→ dao structure</a></li>
+                <li><a href="#voting">→ voting mechanism</a></li>
+                <li><a href="#roadmap">→ roadmap</a></li>
             </ul>
 
-            <h2>[RESOURCES]</h2>
+            <h2>[resources]</h2>
             <ul>
-                <li><a href="#faq">→ FAQ</a></li>
-                <li><a href="#community">→ Community</a></li>
-                <li><a href="#feedback">→ Give Feedback</a></li>
+                <li><a href="#faq">→ faq</a></li>
+                <li><a href="#community">→ community</a></li>
+                <li><a href="#feedback">→ give feedback</a></li>
             </ul>
         </nav>
 
         <main class="main-content">
-            <div class="header">
-                <div class="logo">NOTHING PROTOCOL</div>
-                <div style="color: #00cc33; font-size: 1.1rem;">COMPLETE TECHNICAL DOCUMENTATION</div>
-            </div>
-
             <div class="breadcrumb">
-                root@ownnothing:~/nothing/docs$ cat complete_documentation.md
+                root@worthless:~/worthless-bot/docs$ cat complete_documentation.md
             </div>
 
-            <a href="index.html" class="back-link">← Back to Home</a>
+            <a href="index.html" class="back-link">← back to home</a>
 
-            <h1>NOTHING PROTOCOL DOCUMENTATION</h1>
-            <p>Welcome to the complete technical documentation for Nothing Protocol, the first decentralized framework designed specifically for achieving absolute zero at scale. By leveraging cutting-edge void mechanics and null-state architecture, we create a sustainable mechanism for doing nothing when you need to do nothing the most.</p>
+            <h1>worthless bot documentation</h1>
+            <p>Welcome to the complete technical documentation for worthless bot, the first autonomous AI agent framework designed specifically for achieving absolute zero at scale. By leveraging cutting-edge LLM reasoning and multi-agent orchestration, we create a sustainable mechanism for doing nothing when you need to do nothing the most.</p>
 
             <div class="warning-box">
                 <strong>[STATUS]</strong>
-                Nothing Protocol is currently in the conceptual/philosophical phase. This documentation represents our vision and intended mechanics. All specifications are subject to remain completely unchanged based on community feedback that we will never read. Consider this documentation as theoretical as quantum mechanics, but less useful.
+                worthless bot is currently in the conceptual/philosophical phase. This documentation represents our vision and intended mechanics. All specifications are subject to remain completely unchanged based on community feedback that we will never read. Consider this documentation as theoretical as quantum mechanics, but less useful.
             </div>
 
             <!-- GETTING STARTED -->
             <section class="section" id="introduction">
-                <h2>## INTRODUCTION</h2>
+                <h2>## introduction</h2>
                 
-                <p>Nothing Protocol is a community-driven framework that protects developers from the catastrophic consequences of actually building something. By pooling collective inertia and leveraging advanced procrastination algorithms, we create a sustainable ecosystem for delivering undefined value when market conditions require maximum vaporware.</p>
+                <p>worthless bot is an AI-driven framework that protects developers from the catastrophic consequences of actually building something. By pooling collective agent inertia and leveraging advanced autonomous procrastination algorithms, we create a sustainable ecosystem for delivering undefined value when market conditions require maximum vaporware.</p>
 
                 <div class="info-box">
                     <strong>[INFO]</strong>
-                    Nothing Protocol operates on the fundamental principle that the best code is no code. Every function call returns void. Every process completes instantly because nothing runs. Every promise resolves to undefined because that's what we promised: nothing.
+                    worthless bot operates on the fundamental principle that the best agent is no agent. Every function call returns void. Every process completes instantly because nothing runs. Every promise resolves to undefined because that's what we promised: nothing.
                 </div>
 
-                <h3>### Core Principles</h3>
+                <h3>### core principles</h3>
                 <ul>
                     <li><strong>Zero Everything:</strong> Zero features, zero bugs, zero users, zero problems</li>
                     <li><strong>Infinite Potential:</strong> The void contains all possibilities by containing none</li>
@@ -352,7 +303,7 @@
             </section>
 
             <section class="section" id="problem">
-                <h2>## THE PROBLEM: OVERENGINEERING EPIDEMIC</h2>
+                <h2>## the problem: overengineering epidemic</h2>
                 
                 <p>The modern development ecosystem has become a hotbed for overengineering, particularly evidenced by repositories that promise revolutionary features. While these repositories offer potential for substantial GitHub stars, they also expose developers to severe risks:</p>
 
@@ -366,14 +317,14 @@
 
                 <div class="warning-box">
                     <strong>[REALITY CHECK]</strong>
-                    The average GitHub repository has 0 users, 1 contributor, and infinite potential that never actualizes. Nothing Protocol embraces this reality and turns it into a feature.
+                    The average AI agent framework has 0 deployed agents, 1 contributor, and infinite potential that never actualizes. worthless bot embraces this reality and turns it into a feature.
                 </div>
             </section>
 
             <section class="section" id="solution">
-                <h2>## SOLUTION OVERVIEW</h2>
+                <h2>## solution overview</h2>
                 
-                <p>Nothing Protocol solves overengineering through radical simplicity: we simply don't build anything. Our three-pillar approach ensures complete protection:</p>
+                <p>worthless bot solves overengineering through radical simplicity: we simply don't build anything. Our three-pillar approach ensures complete protection:</p>
 
                 <div class="feature-grid">
                     <div class="feature-card">
@@ -390,7 +341,7 @@
                     </div>
                 </div>
 
-                <h3>### How It Works</h3>
+                <h3>### how it works</h3>
                 <ol>
                     <li><strong>Installation Phase:</strong> Developer installs packages that export empty objects</li>
                     <li><strong>Configuration Phase:</strong> Developer configures nothing (literally zero config required)</li>
@@ -401,11 +352,11 @@
             </section>
 
             <section class="section" id="installation">
-                <h2>## INSTALLATION</h2>
+                <h2>## installation</h2>
                 
-                <p>Getting started with Nothing Protocol is incredibly simple because there's nothing to set up.</p>
+                <p>Getting started with worthless bot is incredibly simple because there's nothing to set up.</p>
 
-                <h3>### Prerequisites</h3>
+                <h3>### prerequisites</h3>
                 <ul>
                     <li>Node.js 18+ (or don't, doesn't matter)</li>
                     <li>A sense of existential dread</li>
@@ -413,34 +364,34 @@
                     <li>Approximately 0 minutes of free time</li>
                 </ul>
 
-                <h3>### Install Core Package</h3>
-                <div class="code-block">npm install @nothing/core</div>
+                <h3>### install core package</h3>
+                <div class="code-block">npm install @worthless/core</div>
 
-                <h3>### Install CLI Tools</h3>
-                <div class="code-block">npm install -g @nothing/cli</div>
+                <h3>### install cli tools</h3>
+                <div class="code-block">npm install -g @worthless/cli</div>
 
-                <h3>### Verify Installation</h3>
-                <div class="code-block">nothing --version
+                <h3>### verify installation</h3>
+                <div class="code-block">worthless --version
 # Output: 0.0.0 (and it will never change)</div>
 
-                <h3>### Quick Start</h3>
-                <div class="code-block">import { createNothing } from '@nothing/core';
+                <h3>### quick start</h3>
+                <div class="code-block">import { createWorthlessBot } from '@worthless/core';
 
-// Create a nothing instance
-const nothing = await createNothing({
+// Create a worthless bot instance
+const bot = await createWorthlessBot({
   mode: 'production', // doesn't affect anything
   debug: false, // nothing to debug
   plugins: [] // empty array of emptiness
 });
 
 // Initialize the void
-await nothing.initialize(); // completes instantly
+await bot.initialize(); // completes instantly
 
 // Run nothing
-await nothing.run(); // completes instantly
+await bot.run(); // completes instantly
 
 // Get results
-const result = nothing.getResult(); // undefined
+const result = bot.getResult(); // undefined
 console.log(result); // undefined
 
 // Clean up
@@ -454,11 +405,11 @@ await nothing.destroy(); // destroys nothing</div>
 
             <!-- PROTOCOL MECHANICS -->
             <section class="section" id="architecture">
-                <h2>## ARCHITECTURE</h2>
+                <h2>## architecture</h2>
                 
-                <p>Nothing Protocol employs a sophisticated multi-layer architecture designed to maximize nothingness while maintaining theoretical scalability.</p>
+                <p>worthless bot employs a sophisticated multi-layer architecture designed to maximize nothingness while maintaining theoretical scalability.</p>
 
-                <h3>### System Layers</h3>
+                <h3>### system layers</h3>
                 <table>
                     <tr>
                         <th>Layer</th>
@@ -498,7 +449,7 @@ await nothing.destroy(); // destroys nothing</div>
                     </tr>
                 </table>
 
-                <h3>### Design Principles</h3>
+                <h3>### design principles</h3>
                 <ul>
                     <li><strong>Stateless Everything:</strong> No state means no state management problems</li>
                     <li><strong>Zero Side Effects:</strong> Pure functions that return nothing have no side effects</li>
@@ -508,11 +459,11 @@ await nothing.destroy(); // destroys nothing</div>
             </section>
 
             <section class="section" id="void-engine">
-                <h2>## VOID ENGINE</h2>
+                <h2>## void engine</h2>
                 
-                <p>The Void Engine is the core computational unit of Nothing Protocol. It processes requests at infinite speed by processing exactly zero operations.</p>
+                <p>The Worthless Engine is the core computational unit of worthless bot. It processes agent requests at infinite speed by processing exactly zero operations.</p>
 
-                <h3>### Engine Specifications</h3>
+                <h3>### engine specifications</h3>
                 <ul>
                     <li><strong>Throughput:</strong> ∞ ops/sec (infinite operations of nothingness)</li>
                     <li><strong>Latency:</strong> 0ms (instant because nothing happens)</li>
@@ -545,11 +496,11 @@ await nothing.destroy(); // destroys nothing</div>
             </section>
 
             <section class="section" id="null-pools">
-                <h2>## NULL POOLS</h2>
+                <h2>## null pools</h2>
                 
                 <p>Null Pools are collective repositories where developers stake their time and energy into the void. Unlike traditional liquidity pools, Null Pools guarantee zero returns on investment.</p>
 
-                <h3>### Pool Mechanics</h3>
+                <h3>### pool mechanics</h3>
                 <ol>
                     <li><strong>Contribution Phase:</strong> Developers contribute code that does nothing</li>
                     <li><strong>Validation Phase:</strong> Smart contracts verify the code does nothing</li>
@@ -557,7 +508,7 @@ await nothing.destroy(); // destroys nothing</div>
                     <li><strong>Distribution Phase:</strong> Nothing is distributed to nobody</li>
                 </ol>
 
-                <h3>### Pool Types</h3>
+                <h3>### pool types</h3>
                 <table>
                     <tr>
                         <th>Pool Type</th>
@@ -593,11 +544,11 @@ await nothing.destroy(); // destroys nothing</div>
             </section>
 
             <section class="section" id="undefined-state">
-                <h2>## UNDEFINED STATE MANAGEMENT</h2>
+                <h2>## undefined state management</h2>
                 
-                <p>Managing undefined state is crucial to Nothing Protocol's success. Our state management system ensures that state remains perpetually undefined across all contexts.</p>
+                <p>Managing undefined state is crucial to worthless bot's success. Our state management system ensures that state remains perpetually undefined across all contexts.</p>
 
-                <div class="code-block">import { createUndefinedStore } from '@nothing/state';
+                <div class="code-block">import { createUndefinedStore } from '@worthless/state';
 
 // Create undefined store
 const store = createUndefinedStore();
@@ -616,7 +567,7 @@ store.subscribe(() => {
 // Dispatch undefined actions
 store.dispatch({ type: 'DO_NOTHING', payload: undefined });</div>
 
-                <h3>### State Guarantees</h3>
+                <h3>### state guarantees</h3>
                 <ul>
                     <li>State is always undefined</li>
                     <li>State never changes</li>
@@ -628,30 +579,30 @@ store.dispatch({ type: 'DO_NOTHING', payload: undefined });</div>
 
             <!-- TECHNICAL DETAILS -->
             <section class="section" id="api">
-                <h2>## API REFERENCE</h2>
+                <h2>## api reference</h2>
                 
-                <p>Complete Nothing Protocol API documentation. Every function returns void, null, or undefined.</p>
+                <p>Complete worthless bot API documentation. Every function returns void, null, or undefined.</p>
 
-                <h3>### Core API</h3>
-                <div class="code-block">// Create nothing instance
-createNothing(options?: VoidOptions): Promise&lt;NothingInstance&gt;
+                <h3>### core api</h3>
+                <div class="code-block">// Create worthless bot instance
+createWorthlessBot(options?: WorthlessOptions): Promise&lt;WorthlessInstance&gt;
 
 // Initialize void
-NothingInstance.initialize(): Promise&lt;void&gt;
+WorthlessInstance.initialize(): Promise&lt;void&gt;
 
 // Run nothing
-NothingInstance.run(): Promise&lt;void&gt;
+WorthlessInstance.run(): Promise&lt;void&gt;
 
 // Get undefined result
-NothingInstance.getResult(): undefined
+WorthlessInstance.getResult(): undefined
 
 // Get null status
-NothingInstance.getStatus(): 'idle' | 'running' | 'complete'
+WorthlessInstance.getStatus(): 'idle' | 'running' | 'complete'
 
 // Destroy nothing
-NothingInstance.destroy(): Promise&lt;void&gt;</div>
+WorthlessInstance.destroy(): Promise&lt;void&gt;</div>
 
-                <h3>### Utility Functions</h3>
+                <h3>### utility functions</h3>
                 <div class="code-block">// Do nothing synchronously
 noop(): void
 
@@ -667,26 +618,26 @@ constant(undefined): () => undefined
 // Sleep and dream of nothing
 sleep(ms: number): Promise&lt;void&gt;</div>
 
-                <h3>### Plugin API</h3>
-                <div class="code-block">interface NothingPlugin {
+                <h3>### plugin api</h3>
+                <div class="code-block">interface WorthlessPlugin {
   name: string;
   version: '0.0.0';
-  initialize(instance: NothingInstance): void | Promise&lt;void&gt;;
+  initialize(instance: WorthlessInstance): void | Promise&lt;void&gt;;
   execute?(): void;
   cleanup?(): void;
 }</div>
             </section>
 
             <section class="section" id="smart-contracts">
-                <h2>## SMART CONTRACTS</h2>
+                <h2>## smart contracts</h2>
                 
-                <p>Nothing Protocol smart contracts are deployed on multiple chains to ensure maximum decentralization of nothingness.</p>
+                <p>worthless bot smart contracts are deployed on multiple chains to ensure maximum decentralization of nothingness.</p>
 
-                <h3>### Contract Architecture</h3>
+                <h3>### contract architecture</h3>
                 <div class="code-block">// SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
-contract NothingProtocol {
+contract WorthlessProtocol {
     // Store nothing
     mapping(address => uint256) public nothing;
     
@@ -711,7 +662,7 @@ contract NothingProtocol {
     }
 }</div>
 
-                <h3>### Deployed Contracts</h3>
+                <h3>### deployed contracts</h3>
                 <table>
                     <tr>
                         <th>Chain</th>
@@ -747,11 +698,11 @@ contract NothingProtocol {
             </section>
 
             <section class="section" id="oracles">
-                <h2>## ORACLE INTEGRATION</h2>
+                <h2>## oracle integration</h2>
                 
-                <p>Nothing Protocol integrates with decentralized oracles to fetch real-time undefined data from the void.</p>
+                <p>worthless bot integrates with decentralized oracles to fetch real-time undefined data from the void.</p>
 
-                <h3>### Oracle Functions</h3>
+                <h3>### oracle functions</h3>
                 <ul>
                     <li><strong>Price Feeds:</strong> Real-time pricing for nothing ($0.00)</li>
                     <li><strong>Randomness:</strong> Cryptographically secure undefined values</li>
@@ -759,26 +710,26 @@ contract NothingProtocol {
                     <li><strong>Cross-Chain:</strong> Synchronize nothing across chains</li>
                 </ul>
 
-                <div class="code-block">import { NothingOracle } from '@nothing/oracle';
+                <div class="code-block">import { WorthlessOracle } from '@worthless/oracle';
 
-const oracle = new NothingOracle();
+const oracle = new WorthlessOracle();
 
 // Get price of nothing
-const price = await oracle.getPrice('NOTHING/USD'); // 0
+const price = await oracle.getPrice('WORTHLESS/USD'); // 0
 
 // Get random nothing
 const random = await oracle.getRandomness(); // undefined
 
 // Fetch external nothing
-const data = await oracle.fetch('https://api.nothing.void'); // null</div>
+const data = await oracle.fetch('https://api.worthless.bot'); // null</div>
             </section>
 
             <section class="section" id="security">
-                <h2>## SECURITY MODEL</h2>
+                <h2>## security model</h2>
                 
-                <p>Nothing Protocol employs military-grade security through the principle of nonexistence. You cannot hack what does not exist.</p>
+                <p>worthless bot employs military-grade security through the principle of nonexistence. You cannot hack what does not exist.</p>
 
-                <h3>### Security Features</h3>
+                <h3>### security features</h3>
                 <ul>
                     <li><strong>Zero Attack Surface:</strong> No code = no vulnerabilities</li>
                     <li><strong>Quantum Resistant:</strong> Immune to quantum computers</li>
@@ -787,7 +738,7 @@ const data = await oracle.fetch('https://api.nothing.void'); // null</div>
                     <li><strong>Immutable:</strong> Nothing never changes</li>
                 </ul>
 
-                <h3>### Security Audits</h3>
+                <h3>### security audits</h3>
                 <table>
                     <tr>
                         <th>Auditor</th>
@@ -823,11 +774,11 @@ const data = await oracle.fetch('https://api.nothing.void'); // null</div>
 
             <!-- GOVERNANCE -->
             <section class="section" id="tokenomics">
-                <h2>## TOKENOMICS</h2>
+                <h2>## tokenomics</h2>
                 
-                <p>The $NOTHING token powers the Nothing Protocol ecosystem. Total supply: 0. Circulating supply: 0.</p>
+                <p>The $WORTHLESS token powers the worthless bot ecosystem. Total supply: 0. Circulating supply: 0.</p>
 
-                <h3>### Token Distribution</h3>
+                <h3>### token distribution</h3>
                 <ul>
                     <li>0% - Community</li>
                     <li>0% - Team</li>
@@ -837,7 +788,7 @@ const data = await oracle.fetch('https://api.nothing.void'); // null</div>
                     <li>100% - Void</li>
                 </ul>
 
-                <h3>### Token Utility</h3>
+                <h3>### token utility</h3>
                 <ol>
                     <li><strong>Governance:</strong> Vote on proposals that change nothing</li>
                     <li><strong>Staking:</strong> Stake nothing to earn nothing</li>
@@ -852,11 +803,11 @@ const data = await oracle.fetch('https://api.nothing.void'); // null</div>
             </section>
 
             <section class="section" id="dao">
-                <h2>## DAO STRUCTURE</h2>
+                <h2>## dao structure</h2>
                 
-                <p>Nothing Protocol is governed by the Nothing DAO, an organization that makes decisions about nothing.</p>
+                <p>worthless bot is governed by the Worthless DAO, an organization that makes decisions about nothing.</p>
 
-                <h3>### Governance Model</h3>
+                <h3>### governance model</h3>
                 <ul>
                     <li><strong>Proposal Creation:</strong> Anyone can propose nothing</li>
                     <li><strong>Voting Period:</strong> 0 days (instant consensus)</li>
@@ -864,7 +815,7 @@ const data = await oracle.fetch('https://api.nothing.void'); // null</div>
                     <li><strong>Execution:</strong> Automatic execution of nothing</li>
                 </ul>
 
-                <h3>### Recent Proposals</h3>
+                <h3>### recent proposals</h3>
                 <table>
                     <tr>
                         <th>Proposal</th>
@@ -894,11 +845,11 @@ const data = await oracle.fetch('https://api.nothing.void'); // null</div>
             </section>
 
             <section class="section" id="voting">
-                <h2>## VOTING MECHANISM</h2>
+                <h2>## voting mechanism</h2>
                 
                 <p>Vote on protocol changes using your $NOTHING tokens (which don't exist).</p>
 
-                <div class="code-block">import { vote } from '@nothing/governance';
+                <div class="code-block">import { vote } from '@worthless/governance';
 
 // Cast vote
 await vote({
@@ -911,11 +862,11 @@ await vote({
             </section>
 
             <section class="section" id="roadmap">
-                <h2>## ROADMAP</h2>
+                <h2>## roadmap</h2>
                 
                 <p>Our ambitious roadmap for delivering nothing, on schedule.</p>
 
-                <h3>### Q1 2024 - Foundation</h3>
+                <h3>### q1 2024 - foundation</h3>
                 <ul>
                     <li>✅ Conceptualize nothing</li>
                     <li>✅ Document nothing</li>
@@ -923,7 +874,7 @@ await vote({
                     <li>✅ Achieve nothing</li>
                 </ul>
 
-                <h3>### Q2 2024 - Growth</h3>
+                <h3>### q2 2024 - growth</h3>
                 <ul>
                     <li>✅ Expand nothing</li>
                     <li>✅ Scale nothing</li>
@@ -931,7 +882,7 @@ await vote({
                     <li>✅ Ship nothing</li>
                 </ul>
 
-                <h3>### Q3-Q4 2024 - Maturity</h3>
+                <h3>### q3-q4 2024 - maturity</h3>
                 <ul>
                     <li>✅ Stabilize nothing</li>
                     <li>✅ Enterprise nothing</li>
@@ -955,10 +906,10 @@ await vote({
 
             <!-- RESOURCES -->
             <section class="section" id="faq">
-                <h2>## FREQUENTLY ASKED QUESTIONS</h2>
+                <h2>## frequently asked questions</h2>
                 
-                <h3>Q: What does Nothing Protocol do?</h3>
-                <p>A: Nothing. That's the point. It's a satirical commentary on overengineered repositories that promise everything and deliver nothing.</p>
+                <h3>Q: What does worthless bot do?</h3>
+                <p>A: Nothing. That's the point. It's a satirical AI agent framework that mocks overengineered repositories that promise everything and deliver nothing.</p>
 
                 <h3>Q: Is this a real project?</h3>
                 <p>A: It's real in the sense that this documentation exists. But the "protocol" itself is intentionally useless.</p>
@@ -983,15 +934,15 @@ await vote({
             </section>
 
             <section class="section" id="community">
-                <h2>## COMMUNITY</h2>
+                <h2>## community</h2>
                 
                 <p>Join our thriving community of people who appreciate doing nothing:</p>
 
                 <ul>
-                    <li><strong>GitHub:</strong> <a href="https://github.com/nothingb0t/nothing.git" style="color: #00ffff;">github.com/nothingb0t/nothing</a></li>
+                    <li><strong>GitHub:</strong> <a href="https://github.com/theworthlessbot/worthless-bot.git" style="color: #00ffff;">github.com/theworthlessbot/worthless-bot</a></li>
                     <li><strong>Discord:</strong> Not created yet (and never will be)</li>
-                    <li><strong>Twitter:</strong> @NothingProtocol (doesn't exist)</li>
-                    <li><strong>Forum:</strong> forum.ownnothing.fun (blank page)</li>
+                    <li><strong>Twitter:</strong> @worthlessb0t (doesn't exist)</li>
+                    <li><strong>Forum:</strong> forum.worthless.bot (blank page)</li>
                 </ul>
 
                 <div class="info-box">
@@ -1007,19 +958,19 @@ await vote({
             </section>
 
             <section class="section" id="feedback">
-                <h2>## GIVE FEEDBACK</h2>
+                <h2>## give feedback</h2>
                 
-                <p>We value your feedback on Nothing Protocol! Please share your thoughts on:</p>
+                <p>We value your feedback on worthless bot! Please share your thoughts on:</p>
 
                 <ul>
                     <li>What aspects of nothingness could be more nothing-like?</li>
                     <li>How can we better document the absence of features?</li>
                     <li>Which non-existent features would you like to not see added?</li>
-                    <li>How has Nothing Protocol changed your life? (It hasn't)</li>
+                    <li>How has worthless bot changed your life? (It hasn't)</li>
                 </ul>
 
-                <div class="code-block">git clone https://github.com/nothingb0t/nothing.git
-cd nothing
+                <div class="code-block">git clone https://github.com/theworthlessbot/worthless-bot.git
+cd worthless-bot
 # Look around
 # Realize there's nothing here
 # Close terminal
@@ -1047,15 +998,14 @@ cd nothing
             </div>
 
             <div style="text-align: center; padding: 40px; margin: 40px 0;">
-                <a href="index.html" class="back-link">← Back to Home</a>
+                <a href="index.html" class="back-link">← back to home</a>
             </div>
 
-            <footer style="border-top: 2px solid #00ff41; padding: 30px; text-align: center; color: #00cc33; margin-top: 60px;">
-                <p>&gt; NOTHING PROTOCOL © 2024-2026</p>
-                <p>&gt; LICENSED UNDER MIT (MORE IRONIC TRANSPARENCY)</p>
-                <p>&gt; BUILT WITH ❤️ AND EXISTENTIAL HUMOR</p>
-                <p>&gt; <a href="https://github.com/nothingb0t/nothing.git" style="color: #00ffff;">GITHUB</a> | <a href="#" style="color: #00ffff;">DOCS</a> | <a href="#" style="color: #00ffff;">VOID</a></p>
-                <p style="margin-top: 20px;">&gt; <span class="blink">_</span></p>
+            <footer style="border-top: 1px solid #999; padding: 30px; text-align: center; color: #666; margin-top: 60px; font-size: 0.85rem;">
+                <p>worthless bot © 2024-2026</p>
+                <p>licensed under mit</p>
+                <p>built with ❤️ and existential humor</p>
+                <p><a href="https://github.com/theworthlessbot/worthless-bot.git" style="color: #333; text-decoration: underline;">github</a> | <a href="#" style="color: #333; text-decoration: underline;">docs</a> | <a href="#" style="color: #333; text-decoration: underline;">worthless</a></p>
             </footer>
         </main>
     </div>

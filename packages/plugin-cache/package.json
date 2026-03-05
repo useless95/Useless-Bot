@@ -1,14 +1,14 @@
 {
-  "name": "@void/plugin-cache",
+  "name": "@worthless/plugin-cache",
   "version": "0.0.0",
-  "description": "Caching plugin for Void",
+  "description": "Caching plugin for worthless bot",
   "main": "./dist/index.js",
   "scripts": {
     "build": "echo 'Nothing to build'",
     "test": "exit 0",
     "lint": "exit 0"
   },
-  "keywords": ["void", "plugin", "cache"],
-  "author": "The Void Team",
+  "keywords": ["worthless", "bot", "plugin", "cache"],
+  "author": "The worthless bot Team",
   "license": "MIT"
 }

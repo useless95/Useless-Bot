@@ -1,24 +1,24 @@
-# @void/react
+# @worthless/react
 
-React hooks and components for the Void framework. Render nothing, reactively.
+React hooks and components for worthless bot. Render nothing, reactively.
 
 ## Installation
 
 ```bash
-npm install @void/react react
+npm install @worthless/react react
 ```
 
 ## Hooks
 
-### `useVoid()`
+### `useWorthless()`
 
-Creates a void instance in your component.
+Creates a worthless bot instance in your component.
 
 ```typescript
-import { useVoid } from '@void/react';
+import { useWorthless } from '@worthless/react';
 
 function MyComponent() {
-  const void = useVoid({
+  const worthless = useWorthless({
     mode: 'production'
   });
 
@@ -31,7 +31,7 @@ function MyComponent() {
 A hook that returns nothing. Always.
 
 ```typescript
-import { useNothing } from '@void/react';
+import { useNothing } from '@worthless/react';
 
 function MyComponent() {
   const nothing = useNothing(); // undefined
@@ -40,12 +40,12 @@ function MyComponent() {
 }
 ```
 
-### `useVoidEffect(callback)`
+### `useWorthlessEffect(callback)`
 
 Like `useEffect`, but does nothing.
 
 ```typescript
-import { useVoidEffect } from '@void/react';
+import { useVoidEffect } from '@worthless/react';
 
 function MyComponent() {
   useVoidEffect(() => {
@@ -61,7 +61,7 @@ function MyComponent() {
 State management for nothing.
 
 ```typescript
-import { useVoidState } from '@void/react';
+import { useVoidState } from '@worthless/react';
 
 function MyComponent() {
   const [value, setValue] = useVoidState(); 
@@ -76,7 +76,7 @@ function MyComponent() {
 Memoizes a callback that does nothing.
 
 ```typescript
-import { useVoidCallback } from '@void/react';
+import { useVoidCallback } from '@worthless/react';
 
 function MyComponent() {
   const handleClick = useVoidCallback(() => {
@@ -92,7 +92,7 @@ function MyComponent() {
 Memoizes nothing.
 
 ```typescript
-import { useVoidMemo } from '@void/react';
+import { useVoidMemo } from '@worthless/react';
 
 function MyComponent() {
   const nothing = useVoidMemo(() => undefined);
@@ -103,18 +103,18 @@ function MyComponent() {
 
 ## Components
 
-### `<VoidProvider>`
+### `<WorthlessProvider>`
 
-Provides void context to your app.
+Provides worthless bot context to your app.
 
 ```typescript
-import { VoidProvider } from '@void/react';
+import { WorthlessProvider } from '@worthless/react';
 
 function App() {
   return (
-    <VoidProvider config={{ mode: 'production' }}>
+    <WorthlessProvider config={{ mode: 'production' }}>
       <YourApp />
-    </VoidProvider>
+    </WorthlessProvider>
   );
 }
 ```
@@ -124,7 +124,7 @@ function App() {
 A component that renders nothing.
 
 ```typescript
-import { Void } from '@void/react';
+import { Void } from '@worthless/react';
 
 function MyComponent() {
   return (
@@ -142,7 +142,7 @@ function MyComponent() {
 Alias for `<Void>`, also renders nothing.
 
 ```typescript
-import { Nothing } from '@void/react';
+import { Nothing } from '@worthless/react';
 
 function MyComponent() {
   return <Nothing />;
@@ -151,17 +151,17 @@ function MyComponent() {
 
 ## Context
 
-### `useVoidContext()`
+### `useWorthlessContext()`
 
-Access the void context from any component.
+Access the worthless bot context from any component.
 
 ```typescript
-import { useVoidContext } from '@void/react';
+import { useWorthlessContext } from '@worthless/react';
 
 function MyComponent() {
-  const { instance, config } = useVoidContext();
+  const { instance, config } = useWorthlessContext();
   
-  return <div>Using void context</div>;
+  return <div>Using worthless bot context</div>;
 }
 ```
 
@@ -169,13 +169,13 @@ function MyComponent() {
 
 ### `withVoid(Component)`
 
-Wraps a component with void capabilities.
+Wraps a component with worthless bot capabilities.
 
 ```typescript
-import { withVoid } from '@void/react';
+import { withVoid } from '@worthless/react';
 
-function MyComponent({ void }) {
-  // Use void instance
+function MyComponent({ worthless }) {
+  // Use worthless bot instance
   return <div>Nothing here</div>;
 }
 
@@ -187,10 +187,10 @@ export default withVoid(MyComponent);
 ### Complete Example
 
 ```typescript
-import { VoidProvider, useVoid, Void } from '@void/react';
+import { WorthlessProvider, useWorthless, Void } from '@worthless/react';
 
-function VoidApp() {
-  const void = useVoid({ debug: true });
+function WorthlessApp() {
+  const worthless = useWorthless({ debug: true });
   
   React.useEffect(() => {
     void.initialize();
@@ -219,9 +219,9 @@ function App() {
 Full TypeScript support included:
 
 ```typescript
-import type { VoidHookOptions, VoidContextValue } from '@void/react';
+import type { WorthlessHookOptions, WorthlessContextValue } from '@worthless/react';
 
-const options: VoidHookOptions = {
+const options: WorthlessHookOptions = {
   mode: 'production',
   debug: false
 };

@@ -1,24 +1,24 @@
-# @void/logger
+# @worthless/logger
 
-Beautiful logging for nothing. Log your void operations with style.
+Beautiful logging for nothing. Log your worthless bot operations with style.
 
 ## Installation
 
 ```bash
-npm install @void/logger
+npm install @worthless/logger
 ```
 
 ## Usage
 
 ```typescript
-import { createLogger } from '@void/logger';
+import { createLogger } from '@worthless/logger';
 
 const logger = createLogger({
   level: 'info',
   pretty: true
 });
 
-logger.info('Starting void operation...');
+logger.info('Starting worthless bot operation...');
 logger.debug('Debugging nothing');
 logger.warn('Warning: Something might not happen');
 logger.error('Error: Nothing went wrong');
@@ -36,7 +36,7 @@ const logger = createLogger({
   level: 'debug',  // 'debug' | 'info' | 'warn' | 'error'
   pretty: true,    // Enable colors
   timestamp: true, // Show timestamps
-  prefix: '[VOID]' // Custom prefix
+  prefix: '[worthless bot]' // Custom prefix
 });
 ```
 
@@ -80,7 +80,7 @@ logger.table([
 ### Basic Usage
 
 ```typescript
-import { createLogger } from '@void/logger';
+import { createLogger } from '@worthless/logger';
 
 const logger = createLogger();
 

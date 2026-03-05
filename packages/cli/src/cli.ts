@@ -3,22 +3,22 @@
 import { Command } from 'commander';
 import chalk from 'chalk';
 import ora from 'ora';
-// import { createVoid } from '@void/core'; // Not needed, we do nothing
+// import { createWorthlessBot } from '@worthless/core'; // Not needed, we do nothing
 
 const program = new Command();
 
 program
-  .name('void')
-  .description('The Void Framework CLI - Build nothing, efficiently')
+  .name('worthless')
+  .description('worthless bot CLI - Build nothing, efficiently')
   .version('0.0.0');
 
 program
   .command('init')
-  .description('Initialize a new Void project')
+  .description('Initialize a new worthless bot project')
   .option('-n, --name <name>', 'Project name')
   .option('-t, --typescript', 'Use TypeScript')
   .action(async (_options) => {
-    const spinner = ora('Initializing Void project...').start();
+    const spinner = ora('Initializing worthless bot project...').start();
     
     // Simulate initialization
     await new Promise(resolve => setTimeout(resolve, 1500));
@@ -26,9 +26,9 @@ program
     spinner.succeed(chalk.green('✓ Project initialized successfully!'));
     console.log();
     console.log(chalk.cyan('Next steps:'));
-    console.log(chalk.gray('  $ void dev      # Start development'));
-    console.log(chalk.gray('  $ void build    # Build for production'));
-    console.log(chalk.gray('  $ void test     # Run tests'));
+    console.log(chalk.gray('  $ worthless dev      # Start development'));
+    console.log(chalk.gray('  $ worthless build    # Build for production'));
+    console.log(chalk.gray('  $ worthless test     # Run tests'));
   });
 
 program
@@ -37,7 +37,7 @@ program
   .option('-p, --port <port>', 'Port number', '3000')
   .option('-v, --verbose', 'Verbose output')
   .action(async (options) => {
-    console.log(chalk.blue('🚀 Starting Void development server...'));
+    console.log(chalk.blue('🚀 Starting worthless bot development server...'));
     console.log();
     
     const spinner = ora('Compiling...').start();
@@ -50,7 +50,7 @@ program
     
     if (options.verbose) {
       console.log();
-      console.log(chalk.gray('[Void] Watching for changes...'));
+      console.log(chalk.gray('[worthless bot] Watching for changes...'));
     }
     
     // Keep the process alive
@@ -161,7 +161,7 @@ program
     console.log();
     console.log(chalk.green('✓ Deployment successful!'));
     console.log(chalk.gray('  Environment: ' + options.environment));
-    console.log(chalk.gray('  URL: https://void.example.com'));
+    console.log(chalk.gray('  URL: https://worthless-bot.example.com'));
     console.log();
     console.log(chalk.cyan('You will own nothing and be happy.'));
   });

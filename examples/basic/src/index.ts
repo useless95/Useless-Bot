@@ -1,19 +1,19 @@
 /**
- * Basic Void Example
+ * Basic worthless bot Example
  * 
- * This example demonstrates the fundamental usage of the Void framework.
+ * This example demonstrates the fundamental usage of worthless bot.
  * Watch as nothing happens, beautifully.
  */
 
-import { createVoid } from '@void/core';
-import { sleep, noop } from '@void/utils';
+import { createWorthlessBot } from '@worthless/core';
+import { sleep, noop } from '@worthless/utils';
 
 async function main() {
-  console.log('🌌 Welcome to the Void!\n');
+  console.log('🤖 Welcome to worthless bot!\n');
 
-  // Create a new Void instance
-  console.log('Creating Void instance...');
-  const app = createVoid({
+  // Create a new worthless bot instance
+  console.log('Creating worthless bot instance...');
+  const app = createWorthlessBot({
     mode: 'development',
     debug: true,
   });
@@ -23,8 +23,8 @@ async function main() {
   await app.initialize();
   console.log(`Status: ${app.getStatus()}\n`);
 
-  // Run the void
-  console.log('Running the Void...');
+  // Run the worthless bot
+  console.log('Running worthless bot...');
   await app.run();
 
   // Get the result
@@ -43,11 +43,11 @@ async function main() {
 
   // Clean up (also does nothing)
   await app.destroy();
-  console.log('Void destroyed. It was never there anyway.');
+  console.log('worthless bot destroyed. It was never there anyway.');
 }
 
 // Run the example
 main().catch((error) => {
-  console.error('Error in the void:', error);
+  console.error('Error in worthless bot:', error);
   process.exit(1);
 });

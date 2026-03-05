@@ -1,13 +1,13 @@
 /**
- * @void/types - TypeScript type definitions
+ * @worthless/types - TypeScript type definitions
  * 
- * Type definitions for the void. Because even nothing needs proper types.
+ * Type definitions for worthless bot. Because even nothing needs proper types.
  */
 
 /**
  * Represents the void - absolute nothingness
  */
-export type Void = undefined;
+export type Worthless = undefined;
 
 /**
  * Represents nothing - null or undefined
@@ -25,68 +25,68 @@ export type Nullish = null | undefined;
 export type Empty = [] | Record<string, never>;
 
 /**
- * The result of a void operation
+ * The result of a worthless bot operation
  */
-export type VoidResult = undefined;
+export type WorthlessResult = undefined;
 
 /**
  * A callback function that returns nothing
  */
-export type VoidCallback = () => void;
+export type WorthlessCallback = () => void;
 
 /**
  * An async callback that returns nothing
  */
-export type VoidAsyncCallback = () => Promise<void>;
+export type WorthlessAsyncCallback = () => Promise<void>;
 
 /**
  * A function that takes an argument and returns void
  */
-export type VoidFunction<T = any> = (arg: T) => void;
+export type WorthlessFunction<T = any> = (arg: T) => void;
 
 /**
  * A promise that resolves to nothing
  */
-export type VoidPromise = Promise<void>;
+export type WorthlessPromise = Promise<void>;
 
 /**
  * T or void
  */
-export type MaybeVoid<T> = T | void;
+export type MaybeWorthless<T> = T | void;
 
 /**
  * T or undefined
  */
-export type VoidOr<T> = T | VoidResult;
+export type WorthlessOr<T> = T | WorthlessResult;
 
 /**
  * Recursively makes all properties void
  */
-export type DeepVoid<T> = {
+export type DeepWorthless<T> = {
   [K in keyof T]: void;
 };
 
 /**
  * A record with void values
  */
-export type VoidRecord<K extends PropertyKey = string> = Record<K, void>;
+export type WorthlessRecord<K extends PropertyKey = string> = Record<K, void>;
 
 /**
  * An array of voids
  */
-export type VoidArray = void[];
+export type WorthlessArray = void[];
 
 /**
  * Makes all properties optional and void
  */
-export type PartialVoid<T> = {
+export type PartialWorthless<T> = {
   [K in keyof T]?: void;
 };
 
 /**
  * Extracts keys that have void values
  */
-export type VoidKeys<T> = {
+export type WorthlessKeys<T> = {
   [K in keyof T]: T[K] extends void ? K : never;
 }[keyof T];
 

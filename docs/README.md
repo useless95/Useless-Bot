@@ -1,4 +1,4 @@
-# Nothing Protocol Website
+# worthless bot Website
 
 Satirical landing page and documentation for **ownnothing.fun**
 
@@ -35,8 +35,8 @@ It's a commentary on GitHub repos with 10k+ stars, elaborate documentation, prof
 
 Update these references throughout:
 - Domain: `ownnothing.fun`
-- GitHub: `https://github.com/nothingb0t/nothing.git`
-- Project name: "Nothing Protocol"
+- GitHub: `https://github.com/theworthlessbot/worthless-bot.git`
+- Project name: "worthless bot"
 
 The humor works because it looks incredibly legitimate until you realize the entire thing is about doing nothing.
 

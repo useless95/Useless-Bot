@@ -1,5 +1,5 @@
-# @void/config
+# @worthless/config
 
-Configuration management for Void. Manage nothing, systematically.
+Configuration management for worthless bot. Manage nothing, systematically.
 
 ## Coming Soon

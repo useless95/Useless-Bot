@@ -1,17 +1,17 @@
-# @void/api
+# @worthless/api
 
-REST API framework built on Void. Create APIs that return nothing, beautifully.
+REST API framework built on worthless bot. Create APIs that return nothing, beautifully.
 
 ## Installation
 
 ```bash
-npm install @void/api
+npm install @worthless/api
 ```
 
 ## Usage
 
 ```typescript
-import { createApi } from '@void/api';
+import { createApi } from '@worthless/api';
 
 const api = createApi({
   port: 3000,

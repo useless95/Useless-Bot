@@ -1,15 +1,15 @@
-# Introduction to Void
+# Introduction to worthless bot
 
-Welcome to the Void framework - the most comprehensive solution for building nothing, efficiently.
+Welcome to worthless bot - the most comprehensive solution for building nothing, efficiently.
 
-## What is Void?
+## What is worthless bot?
 
-Void is a modern, enterprise-grade framework designed from the ground up to help developers accomplish nothing with maximum efficiency. Built with TypeScript and featuring a modular architecture, Void provides all the tools you need to ship nothing to production.
+worthless bot is a modern, enterprise-grade framework designed from the ground up to help developers accomplish nothing with maximum efficiency. Built with TypeScript and featuring a modular architecture, worthless bot provides all the tools you need to ship nothing to production.
 
-## Why Void?
+## Why worthless bot?
 
 ### 🎯 Zero Configuration
-Void works out of the box. No complex setup, no confusing options. Just install and start doing nothing.
+worthless bot works out of the box. No complex setup, no confusing options. Just install and start doing nothing.
 
 ### 📦 Modular Architecture
 Use only what you need. Every package is independently usable, allowing you to cherry-pick functionality.
@@ -28,14 +28,14 @@ Works in Node.js, browsers, and edge runtimes. Nothing works everywhere.
 
 ## Core Concepts
 
-### The Void Instance
+### The worthless bot Instance
 
-At the heart of Void is the `VoidInstance` - a manager for your nothing:
+At the heart of worthless bot is the `WorthlessInstance` - a manager for your nothing:
 
 ```typescript
-import { createVoid } from '@void/core';
+import { createWorthlessBot } from '@worthless/core';
 
-const app = createVoid({
+const app = createWorthlessBot({
   mode: 'production',
   debug: false
 });
@@ -51,11 +51,11 @@ const result = app.getResult(); // undefined
 - **Nothing** (`null | undefined`): The absence or nullification of value
 - **Empty** (`[]` | `{}`): Containers with no content
 
-All are valid forms of nothing in the Void framework.
+All are valid forms of nothing in worthless bot.
 
 ### Packages
 
-Void is organized as a monorepo with 50+ packages:
+worthless bot is organized as a monorepo with 50+ packages:
 
 - **Core Packages**: Fundamental functionality
 - **Interface Packages**: CLIs, APIs, SDKs
@@ -68,24 +68,24 @@ Void is organized as a monorepo with 50+ packages:
 
 ```bash
 # Install core packages
-npm install @void/core @void/cli
+npm install @worthless/core @worthless/cli
 
 # Or use the CLI to scaffold
-npx @void/create my-app
+npx @worthless/create my-app
 ```
 
-### Your First Void App
+### Your First worthless bot App
 
 ```typescript
-import { createVoid } from '@void/core';
-import { logger } from '@void/logger';
+import { createWorthlessBot } from '@worthless/core';
+import { logger } from '@worthless/logger';
 
 async function main() {
-  logger.info('Creating void...');
-  const app = createVoid();
+  logger.info('Creating worthless bot...');
+  const app = createWorthlessBot();
   
   await app.initialize();
-  logger.success('Void initialized!');
+  logger.success('worthless bot initialized!');
   
   await app.run();
   logger. success('Nothing accomplished!');
@@ -98,21 +98,21 @@ main();
 
 ```bash
 # Start development server
-void dev
+worthless dev
 
 # Build for production
-void build
+worthless build
 
 # Run tests
-void test
+worthless test
 
 # Deploy to production
-void deploy
+worthless deploy
 ```
 
 ## Philosophy
 
-Void is built on three core principles:
+worthless bot is built on three core principles:
 
 1. **Nothing is Everything**: Embrace the void
 2. **Simplicity**: Do less, accomplish nothing

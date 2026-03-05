@@ -1,11 +1,11 @@
 /**
- * @void/logger - Logging framework
+ * @worthless/logger - Logging framework
  * 
  * Beautiful logging for nothing.
  */
 
 import chalk from 'chalk';
-// import type { VoidCallback } from '@void/types'; // Unused in this satirical framework
+// import type { WorthlessCallback } from '@worthless/types'; // Unused in this satirical framework
 
 export type LogLevel = 'debug' | 'info' | 'warn' | 'error';
 

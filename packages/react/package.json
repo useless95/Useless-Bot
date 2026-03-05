@@ -1,7 +1,7 @@
 {
-  "name": "@void/react",
+  "name": "@worthless/react",
   "version": "0.0.0",
-  "description": "React integration for Void",
+  "description": "React integration for worthless bot",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
@@ -12,15 +12,16 @@
     "lint": "eslint src/ --max-warnings 0 || exit 0"
   },
   "keywords": [
-    "void",
+    "worthless",
+    "bot",
     "react",
     "hooks"
   ],
-  "author": "The Void Team",
+  "author": "The worthless bot Team",
   "license": "MIT",
   "dependencies": {
-    "@void/core": "workspace:*",
-    "@void/types": "workspace:*"
+    "@worthless/core": "workspace:*",
+    "@worthless/types": "workspace:*"
   },
   "peerDependencies": {
     "react": "^18.0.0"

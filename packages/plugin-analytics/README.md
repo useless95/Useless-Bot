@@ -1,5 +1,5 @@
-# @void/plugin-analytics
+# @worthless/plugin-analytics
 
-Analytics plugin for Void. Track nothing, comprehensively.
+Analytics plugin for worthless bot. Track nothing, comprehensively.
 
 ## Coming Soon

@@ -60,7 +60,7 @@ A massive monorepo with 50+ packages, each depending on others, looking like a s
 ### Core Concept
 A massive monorepo with 50+ packages, each depending on others, looking like a serious open-source ecosystem that ultimately does absolutely nothing.
 
-**Project Name:** `@void/*` - The Void Framework
+**Project Name:** `@worthless/*` - worthless bot
 
 ### Key Features ✅
 - **Professional Structure**: `/packages` directory with utils, helpers, core, cli, sdk, api, middleware, plugins, etc.
@@ -88,21 +88,21 @@ A massive monorepo with 50+ packages, each depending on others, looking like a s
 ### What Was Built ✅
 
 **Complete Packages (6):**
-1. `@void/core` - Full implementation with lifecycle, plugins, tests
-2. `@void/cli` - Working CLI with beautiful output, all commands functional
-3. `@void/utils` - 20+ utility functions, all tested
-4. `@void/types` - Comprehensive TypeScript type definitions
-5. `@void/logger` - Full-featured logging with colors
-6. `@void/react` - React hooks and components
+1. `@worthless/core` - Full implementation with lifecycle, plugins, tests
+2. `@worthless/cli` - Working CLI with beautiful output, all commands functional
+3. `@worthless/utils` - 20+ utility functions, all tested
+4. `@worthless/types` - Comprehensive TypeScript type definitions
+5. `@worthless/logger` - Full-featured logging with colors
+6. `@worthless/react` - React hooks and components
 
 **Stub Packages (7):**
-7. `@void/api` - REST API framework (ready to expand)
-8. `@void/sdk` - Software development kit (stub)
-9. `@void/client` - Client library (stub)
-10. `@void/server` - Server implementation (stub)
-11. `@void/config` - Configuration management (stub)
-12. `@void/plugin-cache` - Caching plugin (stub)
-13. `@void/plugin-analytics` - Analytics plugin (stub)
+7. `@worthless/api` - REST API framework (ready to expand)
+8. `@worthless/sdk` - Software development kit (stub)
+9. `@worthless/client` - Client library (stub)
+10. `@worthless/server` - Server implementation (stub)
+11. `@worthless/config` - Configuration management (stub)
+12. `@worthless/plugin-cache` - Caching plugin (stub)
+13. `@worthless/plugin-analytics` - Analytics plugin (stub)
 
 **Documentation:**
 - Professional README with badges

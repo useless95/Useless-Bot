@@ -1,81 +1,81 @@
 /**
- * @void/core - Core framework functionality
+ * @worthless/core - Core framework functionality
  * 
- * The heart of the Void framework. Everything starts here, and ends here.
+ * The heart of worthless bot. Everything starts here, and ends here.
  * Which is to say, it starts and ends with nothing.
  */
 
 /**
- * Configuration options for creating a Void instance
+ * Configuration options for creating a worthless bot instance
  */
-export interface VoidOptions {
+export interface WorthlessOptions {
   /** The mode to run in */
   mode?: 'development' | 'production';
   /** Enable debug logging */
   debug?: boolean;
   /** Plugins to load */
-  plugins?: VoidPlugin[];
+  plugins?: WorthlessPlugin[];
 }
 
 /**
- * A Void plugin interface
+ * A worthless bot plugin interface
  */
-export interface VoidPlugin {
+export interface WorthlessPlugin {
   name: string;
   version: string;
-  initialize: (instance: VoidInstance) => Promise<void> | void;
+  initialize: (instance: WorthlessInstance) => Promise<void> | void;
 }
 
 /**
- * The Void instance interface
+ * The worthless bot instance interface
  */
-export interface VoidInstance {
-  /** Initialize the void */
+export interface WorthlessInstance {
+  /** Initialize the worthless bot */
   initialize: () => Promise<void>;
-  /** Run the void */
+  /** Run the worthless bot */
   run: () => Promise<void>;
-  /** Destroy the void */
+  /** Destroy the worthless bot */
   destroy: () => Promise<void>;
-  /** Get the result of running the void */
+  /** Get the result of running the worthless bot */
   getResult: () => undefined;
   /** Get the current status */
   getStatus: () => 'idle' | 'initializing' | 'ready' | 'running' | 'destroyed';
   /** Get the configuration */
-  getConfig: () => VoidOptions;
+  getConfig: () => WorthlessOptions;
 }
 
 /**
- * Base error class for Void-related errors
+ * Base error class for worthless bot-related errors
  */
-export class VoidError extends Error {
+export class WorthlessError extends Error {
   constructor(message: string) {
     super(message);
-    this.name = 'VoidError';
+    this.name = 'WorthlessError';
     // You will own nothing and be happy
   }
 }
 
 /**
- * Creates a new Void instance
+ * Creates a new worthless bot instance
  * 
  * @param options - Configuration options
- * @returns A new VoidInstance
+ * @returns A new WorthlessInstance
  * 
  * @example
  * ```typescript
- * const app = createVoid({ mode: 'production' });
+ * const app = createWorthlessBot({ mode: 'production' });
  * await app.initialize();
  * await app.run();
  * ```
  */
-export function createVoid(options: VoidOptions = {}): VoidInstance {
-  const config: VoidOptions = {
+export function createWorthlessBot(options: WorthlessOptions = {}): WorthlessInstance {
+  const config: WorthlessOptions = {
     mode: options.mode ?? 'development',
     debug: options.debug ?? false,
     plugins: options.plugins ?? [],
   };
 
-  let status: VoidInstance['getStatus'] extends () => infer R ? R : never = 'idle';
+  let status: WorthlessInstance['getStatus'] extends () => infer R ? R : never = 'idle';
 
   return {
     async initialize() {
@@ -92,13 +92,13 @@ export function createVoid(options: VoidOptions = {}): VoidInstance {
       status = 'ready';
       
       if (config.debug) {
-        console.log('[Void] Initialized successfully');
+        console.log('[worthless bot] Initialized successfully');
       }
     },
 
     async run() {
       if (status !== 'ready') {
-        throw new VoidError('Void must be initialized before running');
+        throw new WorthlessError('worthless bot must be initialized before running');
       }
       
       status = 'running';
@@ -107,8 +107,8 @@ export function createVoid(options: VoidOptions = {}): VoidInstance {
       await new Promise(resolve => setTimeout(resolve, 10));
       
       if (config.debug) {
-        console.log('[Void] Running...');
-        console.log('[Void] Complete!');
+        console.log('[worthless bot] Running...');
+        console.log('[worthless bot] Complete!');
       }
       
       status = 'ready';
@@ -118,7 +118,7 @@ export function createVoid(options: VoidOptions = {}): VoidInstance {
       status = 'destroyed';
       
       if (config.debug) {
-        console.log('[Void] Destroyed');
+        console.log('[worthless bot] Destroyed');
       }
     },
 
@@ -137,12 +137,12 @@ export function createVoid(options: VoidOptions = {}): VoidInstance {
 }
 
 /**
- * Checks if a value is a Void instance
+ * Checks if a value is a worthless bot instance
  * 
  * @param value - The value to check
- * @returns True if the value is a VoidInstance
+ * @returns True if the value is a WorthlessInstance
  */
-export function isVoid(value: unknown): value is VoidInstance {
+export function isWorthless(value: unknown): value is WorthlessInstance {
   return (
     typeof value === 'object' &&
     value !== null &&

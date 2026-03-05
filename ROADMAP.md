@@ -1,18 +1,18 @@
 # Roadmap
 
-The future of nothing. Here's what we're planning for Void.
+The future of nothing. Here's what we're planning for worthless bot.
 
 ## Version 0.1.0 (Next Release) 🚀
 
 **Target: Q2 2026**
 
 ### New Packages
-- [ ] `@void/api` - REST API framework
-- [ ] `@void/graphql` - GraphQL integration
-- [ ] `@void/websocket` - WebSocket support
-- [ ] `@void/database` - Database adapters
-- [ ] `@void/cache` - Caching layer
-- [ ] `@void/queue` - Job queue system
+- [ ] `@worthless/api` - REST API framework
+- [ ] `@worthless/graphql` - GraphQL integration
+- [ ] `@worthless/websocket` - WebSocket support
+- [ ] `@worthless/database` - Database adapters
+- [ ] `@worthless/cache` - Caching layer
+- [ ] `@worthless/queue` - Job queue system
 
 ### Improvements
 - [ ] Enhanced error messages
@@ -32,21 +32,21 @@ The future of nothing. Here's what we're planning for Void.
 **Target: Q3 2026**
 
 ### Framework Integrations
-- [ ] `@void/vue` - Vue 3 integration
-- [ ] `@void/angular` - Angular integration
-- [ ] `@void/svelte` - Svelte integration
-- [ ] `@void/solid` - Solid.js integration
-- [ ] `@void/next` - Next.js integration
-- [ ] `@void/remix` - Remix integration
+- [ ] `@worthless/vue` - Vue 3 integration
+- [ ] `@worthless/angular` - Angular integration
+- [ ] `@worthless/svelte` - Svelte integration
+- [ ] `@worthless/solid` - Solid.js integration
+- [ ] `@worthless/next` - Next.js integration
+- [ ] `@worthless/remix` - Remix integration
 
 ### Backend Support
-- [ ] `@void/express` - Express middleware
-- [ ] `@void/fastify` - Fastify plugin
-- [ ] `@void/koa` - Koa middleware
-- [ ] `@void/hono` - Hono integration
+- [ ] `@worthless/express` - Express middleware
+- [ ] `@worthless/fastify` - Fastify plugin
+- [ ] `@worthless/koa` - Koa middleware
+- [ ] `@worthless/hono` - Hono integration
 
 ### Testing
-- [ ] `@void/testing` - Testing utilities
+- [ ] `@worthless/testing` - Testing utilities
 - [ ] Visual regression testing
 - [ ] E2E testing tools
 - [ ] Performance benchmarks
@@ -109,7 +109,7 @@ We're listening! Top requested features:
 
 ## Long-term Vision
 
-Our mission is to make Void the **de facto standard for doing nothing**. We envision:
+Our mission is to make worthless bot the **de facto standard for doing nothing**. We envision:
 
 - 🌍 Used by millions of developers worldwide
 - 🏢 Adopted by Fortune 500 companies
@@ -136,23 +136,23 @@ We follow semantic versioning:
 - **Minor** (0.1.0): New features
 - **Patch** (0.0.1): Bug fixes
 
-Given that Void does nothing, breaking changes are theoretical.
+Given that worthless bot does nothing, breaking changes are theoretical.
 
 ## Communication
 
 Stay updated:
 
-- 📰 Follow our [blog](https://void-framework.dev/blog)
-- 🐦 Twitter: [@voidframework](https://twitter.com/voidframework)
-- 💬 Discord: [Join server](https://discord.gg/void)
-- 📧 Newsletter: [Subscribe](https://void-framework.dev/newsletter)
+- 📰 Follow our [blog](https://worthless-bot.dev/blog)
+- 🐦 Twitter: [@worthlessbot](https://twitter.com/worthlessbot)
+- 💬 Discord: [Join server](https://discord.gg/worthless)
+- 📧 Newsletter: [Subscribe](https://worthless-bot.dev/newsletter)
 
 ## Funding
 
-Void is MIT licensed and free forever. Support development:
+worthless bot is MIT licensed and free forever. Support development:
 
 - 💖 [GitHub Sponsors](https://github.com/sponsors/yourusername)
-- ☕ [Buy us a coffee](https://buymeacoffee.com/voidframework)
+- ☕ [Buy us a coffee](https://buymeacoffee.com/worthlessbot)
 - 🏢 Enterprise support plans
 
 ---

@@ -1,5 +1,5 @@
-# @void/plugin-cache
+# @worthless/plugin-cache
 
-Caching plugin for Void. Cache nothing for instant retrieval.
+Caching plugin for worthless bot. Cache nothing for instant retrieval.
 
 ## Coming Soon

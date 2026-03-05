@@ -1,12 +1,13 @@
 {
-  "name": "@void/monorepo",
+  "name": "@worthless/monorepo",
   "version": "0.0.0",
   "private": true,
   "description": "The complete framework for building nothing, efficiently.",
   "keywords": [
     "framework",
     "nothing",
-    "void",
+    "worthless",
+    "bot",
     "enterprise",
     "scalable",
     "production-ready",
@@ -15,10 +16,10 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/nothingb0t/nothing.git"
+    "url": "https://github.com/theworthlessbot/worthless-bot.git"
   },
   "license": "MIT",
-  "author": "The Void Team",
+  "author": "The worthless bot Team",
   "workspaces": [
     "packages/*"
   ],

@@ -1,24 +1,24 @@
-# n0thing Agent
+# worthless bot
 
 <div align="center">
   
-  [![Build Status](https://img.shields.io/badge/build-passing-brightgreen.svg)](https://github.com/nothingb0t/nothing)
-  [![Coverage](https://img.shields.io/badge/coverage-100%25-brightgreen.svg)](https://github.com/nothingb0t/nothing)
+  [![Build Status](https://img.shields.io/badge/build-passing-brightgreen.svg)](https://github.com/theworthlessbot/worthless-bot)
+  [![Coverage](https://img.shields.io/badge/coverage-100%25-brightgreen.svg)](https://github.com/theworthlessbot/worthless-bot)
   [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
   [![TypeScript](https://img.shields.io/badge/TypeScript-5.3-blue.svg)](https://www.typescriptlang.org/)
-  [![AI Powered](https://img.shields.io/badge/AI-Powered-blueviolet.svg)](https://github.com/nothingb0t/nothing)
+  [![AI Powered](https://img.shields.io/badge/AI-Powered-blueviolet.svg)](https://github.com/theworthlessbot/worthless-bot)
   
   **The world's first AI agent framework that does absolutely n0thing, autonomously.**
   
-  [Documentation](https://ownnothing.fun) • [Getting Started](#getting-started) • [Examples](#examples) • [Agent API](#api)
+  [Documentation](https://worthless.bot) • [Getting Started](#getting-started) • [Examples](#examples) • [worthless bot API](#api)
   
 </div>
 
 ---
 
-## 🤖 Why n0thing Agent?
+## 🤖 Why worthless bot?
 
-n0thing Agent is an autonomous AI agent framework designed from the ground up to achieve n0thing at scale. Leveraging cutting-edge LLM technology and advanced reasoning capabilities, n0thing Agent orchestrates complex workflows that ultimately accomplish zero tasks with maximum efficiency.
+worthless bot is an autonomous AI agent framework designed from the ground up to achieve n0thing at scale. Leveraging cutting-edge LLM technology and advanced reasoning capabilities, worthless bot orchestrates complex workflows that ultimately accomplish zero tasks with maximum efficiency.
 
 ### ✨ Features
 
@@ -38,27 +38,27 @@ n0thing Agent is an autonomous AI agent framework designed from the ground up to
 ### Core Components
 | Package | Version | Description |
 |---------|---------|-------------|
-| [@n0thing/core](packages/core) | ![npm](https://img.shields.io/badge/v0.0.0-blue) | Core agent orchestration engine |
-| [@n0thing/utils](packages/utils) | ![npm](https://img.shields.io/badge/v0.0.0-blue) | Essential utilities for doing n0thing |
-| [@n0thing/types](packages/types) | ![npm](https://img.shields.io/badge/v0.0.0-blue) | TypeScript type definitions for n0thing |
-| [@n0thing/config](packages/config) | ![npm](https://img.shields.io/badge/v0.0.0-blue) | Agent configuration management |
-| [@n0thing/logger](packages/logger) | ![npm](https://img.shields.io/badge/v0.0.0-blue) | Logging framework for n0thing events |
+| [@worthless/core](packages/core) | ![npm](https://img.shields.io/badge/v0.0.0-blue) | Core agent orchestration engine |
+| [@worthless/utils](packages/utils) | ![npm](https://img.shields.io/badge/v0.0.0-blue) | Essential utilities for doing n0thing |
+| [@worthless/types](packages/types) | ![npm](https://img.shields.io/badge/v0.0.0-blue) | TypeScript type definitions for n0thing |
+| [@worthless/config](packages/config) | ![npm](https://img.shields.io/badge/v0.0.0-blue) | Agent configuration management |
+| [@worthless/logger](packages/logger) | ![npm](https://img.shields.io/badge/v0.0.0-blue) | Logging framework for n0thing events |
 
 ### Interface Components
 | Package | Version | Description |
 |---------|---------|-------------|
-| [@n0thing/cli](packages/cli) | ![npm](https://img.shields.io/badge/v0.0.0-blue) | Command-line agent interface |
-| [@n0thing/api](packages/api) | ![npm](https://img.shields.io/badge/v0.0.0-blue) | REST API for agent communication |
-| [@n0thing/sdk](packages/sdk) | ![npm](https://img.shields.io/badge/v0.0.0-blue) | Software development kit for agents |
-| [@n0thing/client](packages/client) | ![npm](https://img.shields.io/badge/v0.0.0-blue) | Client library for agent interaction |
-| [@n0thing/server](packages/server) | ![npm](https://img.shields.io/badge/v0.0.0-blue) | Server implementation for agent hosting |
+| [@worthless/cli](packages/cli) | ![npm](https://img.shields.io/badge/v0.0.0-blue) | Command-line agent interface |
+| [@worthless/api](packages/api) | ![npm](https://img.shields.io/badge/v0.0.0-blue) | REST API for agent communication |
+| [@worthless/sdk](packages/sdk) | ![npm](https://img.shields.io/badge/v0.0.0-blue) | Software development kit for agents |
+| [@worthless/client](packages/client) | ![npm](https://img.shields.io/badge/v0.0.0-blue) | Client library for agent interaction |
+| [@worthless/server](packages/server) | ![npm](https://img.shields.io/badge/v0.0.0-blue) | Server implementation for agent hosting |
 
 ### AI Integration Components
 | Package | Version | Description |
 |---------|---------|-------------|
-| [@n0thing/react](packages/react) | ![npm](https://img.shields.io/badge/v0.0.0-blue) | React components for agent UI |
-| [@n0thing/plugin-analytics](packages/plugin-analytics) | ![npm](https://img.shields.io/badge/v0.0.0-blue) | Analytics plugin for tracking n0thing |
-| [@n0thing/plugin-cache](packages/plugin-cache) | ![npm](https://img.shields.io/badge/v0.0.0-blue) | Caching plugin for n0thing results |
+| [@worthless/react](packages/react) | ![npm](https://img.shields.io/badge/v0.0.0-blue) | React components for agent UI |
+| [@worthless/plugin-analytics](packages/plugin-analytics) | ![npm](https://img.shields.io/badge/v0.0.0-blue) | Analytics plugin for tracking n0thing |
+| [@worthless/plugin-cache](packages/plugin-cache) | ![npm](https://img.shields.io/badge/v0.0.0-blue) | Caching plugin for n0thing results |
 
 [View all agent components →](packages/)
 
@@ -67,20 +67,20 @@ n0thing Agent is an autonomous AI agent framework designed from the ground up to
 ### Installation
 
 ```bash
-npm install @n0thing/core @n0thing/cli
+npm install @worthless/core @worthless/cli
 # or
-yarn add @n0thing/core @n0thing/cli
+yarn add @worthless/core @worthless/cli
 # or
-pnpm add @n0thing/core @n0thing/cli
+pnpm add @worthless/core @worthless/cli
 ```
 
 ### Quick Start
 
 ```typescript
-import { createN0thingAgent } from '@n0thing/core';
+import { createWorthlessBot } from '@worthless/core';
 
-// Create a new n0thing Agent instance
-const agent = createN0thingAgent({
+// Create a new worthless bot instance
+const agent = createWorthlessBot({
   model: 'gpt-4',
   reasoning: 'advanced',
   autonomy: 'full',
@@ -118,7 +118,7 @@ n0thing deploy
 
 Comprehensive documentation is available at [ownnothing.fun](https://ownnothing.fun)
 
-- [Introduction](docs/introduction.md) - What is n0thing Agent?
+- [Introduction](docs/introduction.md) - What is worthless bot?
 - [Agent Architecture](docs/core-concepts.md) - Understanding autonomous n0thing
 - [API Reference](docs/api-reference.md) - Complete agent API
 - [Multi-Agent Systems](docs/multi-agent.md) - Orchestrating multiple agents
@@ -140,8 +140,8 @@ This is a monorepo managed with pnpm workspaces.
 
 ```bash
 # Clone the repository
-git clone https://github.com/nothingb0t/nothing.git
-cd nothing
+git clone https://github.com/theworthlessbot/worthless-bot.git
+cd worthless-bot
 
 # Install dependencies
 pnpm install
@@ -170,7 +170,7 @@ We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md) f
 
 ## 📄 License
 
-MIT © The n0thing Agent Team
+MIT © The worthless bot Team
 
 ---
 
@@ -178,7 +178,7 @@ MIT © The n0thing Agent Team
 
 Thank you to our sponsors for supporting autonomous n0thing!
 
-[Become a sponsor →](https://github.com/sponsors/nothingb0t)
+[Become a sponsor →](https://github.com/sponsors/worthlessb0t)
 
 ## 📊 Stats
 
@@ -193,7 +193,7 @@ Thank you to our sponsors for supporting autonomous n0thing!
 
 <div align="center">
   
-Made with ❤️ by [The n0thing Agent Team](https://github.com/nothingb0t)
+Made with ❤️ by [The worthless bot Team](https://github.com/theworthlessbot)
 
 **You will own n0thing and be happy.**
 

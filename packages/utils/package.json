@@ -1,7 +1,7 @@
 {
-  "name": "@void/utils",
+  "name": "@worthless/utils",
   "version": "0.0.0",
-  "description": "Utility functions for Void",
+  "description": "Utility functions for worthless bot",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
@@ -13,11 +13,12 @@
     "lint": "eslint src/ --max-warnings 0 || exit 0"
   },
   "keywords": [
-    "void",
+    "worthless",
+    "bot",
     "utilities",
     "helpers"
   ],
-  "author": "The Void Team",
+  "author": "The worthless bot Team",
   "license": "MIT",
   "dependencies": {},
   "devDependencies": {

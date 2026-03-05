@@ -1,40 +1,40 @@
 # API Reference
 
-Complete API documentation for the Void framework.
+Complete API documentation for worthless bot.
 
-## @void/core
+## @worthless/core
 
-### `createVoid(options?)`
+### `createWorthlessBot(options?)`
 
-Creates a new Void instance.
+Creates a new worthless bot instance.
 
 **Parameters:**
-- `options` (`VoidOptions`): Configuration options
+- `options` (`WorthlessOptions`): Configuration options
 
-**Returns:** `VoidInstance`
+**Returns:** `WorthlessInstance`
 
 **Example:**
 ```typescript
-const app = createVoid({
+const app = createWorthlessBot({
   mode: 'production',
   debug: false,
   plugins: []
 });
 ```
 
-### `VoidInstance`
+### `WorthlessInstance`
 
-The main void instance interface.
+The main worthless bot instance interface.
 
 #### Methods
 
 ##### `initialize(): Promise<void>`
 
-Initializes the void instance.
+Initializes the worthless bot instance.
 
 **Returns:** Promise that resolves when initialization is complete
 
-**Throws:** `VoidError` if already initialized
+**Throws:** `WorthlessError` if already initialized
 
 **Example:**
 ```typescript
@@ -43,11 +43,11 @@ await app.initialize();
 
 ##### `run(): Promise<void>`
 
-Runs the void operation.
+Runs the worthless bot operation.
 
 **Returns:** Promise that resolves when operation is complete
 
-**Throws:** `VoidError` if not initialized
+**Throws:** `WorthlessError` if not initialized
 
 **Example:**
 ```typescript
@@ -56,7 +56,7 @@ await app.run();
 
 ##### `destroy(): Promise<void>`
 
-Destroys the void instance and cleans up resources.
+Destroys the worthless bot instance and cleans up resources.
 
 **Returns:** Promise that resolves when destroyed
 
@@ -67,7 +67,7 @@ await app.destroy();
 
 ##### `getResult(): undefined`
 
-Gets the result of the void operation.
+Gets the result of the worthless bot operation.
 
 **Returns:** Always returns `undefined`
 
@@ -76,20 +76,20 @@ Gets the result of the void operation.
 const result = app.getResult(); // undefined
 ```
 
-##### `getStatus(): VoidStatus`
+##### `getStatus(): WorthlessStatus`
 
-Gets the current status of the void instance.
+Gets the current status of the worthless bot instance.
 
-**Returns:** Status string: `'idle' | 'initializing' | 'ready' | 'running' | 'destroyed'`
+**Returns:** Status string: `'idle' | 'initializing' | 'ready' | 'running' | 'destroyed'``
 
 **Example:**
 ```typescript
 console.log(app.getStatus()); // 'ready'
 ```
 
-##### `getConfig(): VoidOptions`
+##### `getConfig(): WorthlessOptions`
 
-Gets the configuration of the void instance.
+Gets the configuration of the worthless bot instance.
 
 **Returns:** Configuration object
 

@@ -1,7 +1,7 @@
 {
-  "name": "@void/server",
+  "name": "@worthless/server",
   "version": "0.0.0",
-  "description": "Server implementation for Void",
+  "description": "Server implementation for worthless bot",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
@@ -10,7 +10,7 @@
     "test": "exit 0",
     "lint": "exit 0"
   },
-  "keywords": ["void", "server"],
-  "author": "The Void Team",
+  "keywords": ["worthless", "bot", "server"],
+  "author": "The worthless bot Team",
   "license": "MIT"
 }
