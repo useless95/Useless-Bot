@@ -176,8 +176,13 @@
                 </div>
             </div>
             <div class="window-body">
-                <h1>useless bot</h1>
-                <p style="font-size: 13px; margin-bottom: 16px;">The world's first AI agent framework for doing absolutely nothing at autonomous scale.</p>
+                <div style="display: flex; align-items: flex-start; gap: 16px; margin-bottom: 16px;">
+                    <img src="bot.gif" alt="useless bot" style="width: 64px; height: 64px; image-rendering: pixelated;">
+                    <div>
+                        <h1 style="margin-bottom: 4px;">useless bot</h1>
+                        <p style="font-size: 13px; margin-bottom: 0;">The world's first AI agent framework for doing absolutely nothing at autonomous scale.</p>
+                    </div>
+                </div>
                 
                 <div class="fieldset">
                     <div class="fieldset-legend">System Features</div>
@@ -288,6 +293,10 @@ console.log(agent.getResult()); // undefined</pre>
                 </div>
             </div>
             <div class="window-body">
+                <div style="text-align: center; margin-bottom: 16px;">
+                    <img src="bot.gif" alt="useless bot mascot" style="width: 80px; height: 80px; image-rendering: pixelated;">
+                </div>
+                
                 <h2>The Useless Philosophy</h2>
                 
                 <p>In a world obsessed with AI agents that do more, build faster, and automate everything, useless bot dares to ask: <em>What if autonomous systems just... didn't?</em></p>
@@ -562,6 +571,17 @@ console.log(agent.getResult()); // undefined</pre>
             <div class="status-bar">
                 <div class="status-bar-field">Documentation v0.0.0</div>
                 <div class="status-bar-field">Page 1 of ∞</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bot Assistant (Clippy-style) -->
+    <div id="bot-assistant" class="bot-assistant" style="display: none;">
+        <div class="bot-assistant-content">
+            <img src="bot.gif" alt="useless bot assistant" class="bot-assistant-avatar">
+            <div class="bot-assistant-bubble">
+                <button class="bot-assistant-close" aria-label="Close">×</button>
+                <p class="bot-assistant-message">Hi! I'm useless bot. I'm here to help you do absolutely nothing!</p>
             </div>
         </div>
     </div>

@@ -5,6 +5,8 @@ class Desktop95 {
     this.zIndexCounter = 10;
     this.activeWindow = null;
     this.dragState = null;
+    this.botAssistantShown = false;
+    this.botMessageIndex = 0;
     
     this.init();
   }
@@ -37,6 +39,14 @@ class Desktop95 {
     setTimeout(() => {
       this.startVirusPopups();
     }, 35000); // 35 seconds - even longer delay
+    
+    // Show bot assistant after boot screen
+    setTimeout(() => {
+      this.showBotAssistant();
+    }, 8000); // Show bot 4 seconds after boot completes
+    
+    // Setup bot assistant cycling through messages
+    this.setupBotAssistant();
   }
   
   playStartupSound() {
@@ -189,6 +199,17 @@ class Desktop95 {
     
     // Add to taskbar
     this.addTaskbarButton(windowId);
+    
+    // Contextual bot messages when opening specific windows
+    setTimeout(() => {
+      if (windowId === 'docs-window' && !this.botAssistantShown) {
+        this.showBotAssistant("I see you're reading documentation! Don't worry, it won't help. 📚");
+      } else if (windowId === 'github-window' && !this.botAssistantShown) {
+        this.showBotAssistant("Thinking of contributing? We accept pull requests that remove features! 🚀");
+      } else if (windowId === 'about-window' && !this.botAssistantShown) {
+        this.showBotAssistant("Learning about the philosophy of nothing? You're already a master! 🧘");
+      }
+    }, 1000);
   }
   
   closeWindow(windowId) {
@@ -526,6 +547,81 @@ class Desktop95 {
     popupEl.addEventListener('mousedown', () => {
       popupEl.style.zIndex = ++this.zIndexCounter;
     });
+  }
+  
+  setupBotAssistant() {
+    const botEl = document.getElementById('bot-assistant');
+    const closeBtn = botEl.querySelector('.bot-assistant-close');
+    
+    // Close button handler
+    closeBtn.addEventListener('click', () => {
+      this.hideBotAssistant();
+    });
+    
+    // Show bot with random messages periodically
+    setInterval(() => {
+      if (!this.botAssistantShown && Math.random() > 0.6) {
+        this.showBotAssistant();
+      }
+    }, 45000); // Check every 45 seconds
+  }
+  
+  showBotAssistant(message = null) {
+    if (this.botAssistantShown) return;
+    
+    const botEl = document.getElementById('bot-assistant');
+    const messageEl = botEl.querySelector('.bot-assistant-message');
+    
+    const messages = [
+      "Hi! I'm useless bot. I'm here to help you do absolutely nothing!",
+      "Did you know? This framework does nothing, and it does it very well!",
+      "Looking for features? There aren't any. That's the point!",
+      "Fun fact: You could close this window, but I'll be back. That's what useless assistants do.",
+      "I see you're browsing documentation. Would you like me to explain the void?",
+      "Autonomous systems are the future! Just not this one.",
+      "I notice you haven't done anything productive. Perfect! You're using this correctly.",
+      "ERROR: Success not found. Mission accomplished!",
+      "Pro tip: The best code is the code that doesn't run.",
+      "Remember: Own nothing, do nothing, be nothing. ✨",
+      "I'm like Clippy, but more honest about my uselessness!",
+      "This system has achieved peak efficiency by doing nothing at all.",
+      "Would you like to install more nothing? Of course you would!",
+      "Warning: Prolonged exposure to useless bot may result in profound insights.",
+      "I'm trained on billions of parameters to produce exactly zero output!",
+      "Fun fact: Every agent deployed produces exactly void. Amazing!",
+      "The revolution will not be automated... because we didn't automate anything.",
+      "I see you're still here. That's dedication to the void!"
+    ];
+    
+    // Use provided message or get next from rotation
+    if (message) {
+      messageEl.textContent = message;
+    } else {
+      messageEl.textContent = messages[this.botMessageIndex % messages.length];
+      this.botMessageIndex++;
+    }
+    
+    botEl.style.display = 'block';
+    botEl.classList.remove('closing');
+    this.botAssistantShown = true;
+    
+    // Auto-hide after 15 seconds
+    setTimeout(() => {
+      if (this.botAssistantShown) {
+        this.hideBotAssistant();
+      }
+    }, 15000);
+  }
+  
+  hideBotAssistant() {
+    const botEl = document.getElementById('bot-assistant');
+    botEl.classList.add('closing');
+    
+    setTimeout(() => {
+      botEl.style.display = 'none';
+      botEl.classList.remove('closing');
+      this.botAssistantShown = false;
+    }, 300); // Match animation duration
   }
 }
 
