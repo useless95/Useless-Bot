@@ -14,13 +14,16 @@ class Desktop95 {
     this.updateClock();
     setInterval(() => this.updateClock(), 1000);
     
+    // Play startup sound
+    this.playStartupSound();
+    
     // Remove boot screen after load
     setTimeout(() => {
       const bootScreen = document.getElementById('boot-screen');
       if (bootScreen) {
         bootScreen.style.display = 'none';
       }
-    }, 2500);
+    }, 4000);
     
     // Auto-open welcome and about windows on page load
     setTimeout(() => {
@@ -28,12 +31,43 @@ class Desktop95 {
       setTimeout(() => {
         this.openWindow('about-window');
       }, 500);
-    }, 3000); // Delay until after boot screen
+    }, 4200); // Delay until after boot screen
     
     // Start annoying virus popups after a delay
     setTimeout(() => {
       this.startVirusPopups();
     }, 35000); // 35 seconds - even longer delay
+  }
+  
+  playStartupSound() {
+    // Create a simple startup beep sound using Web Audio API
+    const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+    
+    // Create a sequence of beeps like old computer startup
+    const beeps = [
+      { freq: 800, duration: 0.1, delay: 0 },
+      { freq: 1000, duration: 0.1, delay: 0.15 },
+      { freq: 1200, duration: 0.15, delay: 0.35 }
+    ];
+    
+    beeps.forEach(beep => {
+      setTimeout(() => {
+        const oscillator = audioContext.createOscillator();
+        const gainNode = audioContext.createGain();
+        
+        oscillator.connect(gainNode);
+        gainNode.connect(audioContext.destination);
+        
+        oscillator.frequency.value = beep.freq;
+        oscillator.type = 'square';
+        
+        gainNode.gain.setValueAtTime(0.1, audioContext.currentTime);
+        gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + beep.duration);
+        
+        oscillator.start(audioContext.currentTime);
+        oscillator.stop(audioContext.currentTime + beep.duration);
+      }, beep.delay * 1000);
+    });
   }
   
   setupEventListeners() {

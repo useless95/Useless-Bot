@@ -20,35 +20,57 @@
             left: 0;
             width: 100vw;
             height: 100vh;
-            background: #000;
-            color: #fff;
+            background: #0000AA;
+            color: #FFFFFF;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
             z-index: 9999;
             font-family: 'Courier New', monospace;
-            animation: fadeOut 0.5s ease-in 2s forwards;
+            animation: fadeOut 0.5s ease-in 3.5s forwards;
+            padding: 40px;
+            box-sizing: border-box;
         }
         
-        #boot-screen h1 {
-            font-size: 32px;
-            margin-bottom: 30px;
-            animation: pulse 1s ease-in-out infinite;
+        #boot-screen .logo-container {
+            text-align: center;
+            margin-bottom: 40px;
         }
         
-        #boot-screen .loading-bar {
-            width: 400px;
-            height: 30px;
-            border: 2px solid #fff;
-            padding: 4px;
+        #boot-screen .logo-container h1 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            font-weight: normal;
+            letter-spacing: 8px;
         }
         
-        #boot-screen .loading-bar-fill {
-            height: 100%;
-            background: #fff;
-            width: 0%;
-            animation: load 2s ease-in-out forwards;
+        #boot-screen pre {
+            font-size: 12px;
+            line-height: 1.2;
+            text-align: left;
+            margin: 0;
+            font-weight: bold;
+            letter-spacing: 1px;
+            text-shadow: 0 0 2px #FFFFFF;
+        }
+        
+        #boot-screen .system-info {
+            margin-top: 40px;
+            text-align: left;
+            font-size: 14px;
+            width: 100%;
+            max-width: 800px;
+        }
+        
+        #boot-screen .system-info p {
+            margin: 5px 0;
+            font-family: 'Courier New', monospace;
+        }
+        
+        #boot-screen .loading-dots {
+            display: inline-block;
+            animation: dots 1.5s steps(4, end) infinite;
         }
         
         @keyframes fadeOut {
@@ -58,25 +80,54 @@
             }
         }
         
-        @keyframes pulse {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.6; }
+        @keyframes dots {
+            0%, 20% { content: '.'; }
+            40% { content: '..'; }
+            60% { content: '...'; }
+            80%, 100% { content: ''; }
         }
         
-        @keyframes load {
-            to { width: 100%; }
+        #boot-screen .blink {
+            animation: blink-anim 1s step-end infinite;
+        }
+        
+        @keyframes blink-anim {
+            0%, 50% { opacity: 1; }
+            51%, 100% { opacity: 0; }
         }
     </style>
 </head>
 <body>
     <!-- Windows 95 Boot Screen -->
     <div id="boot-screen">
-        <h1>useless bot 95</h1>
-        <div class="loading-bar">
-            <div class="loading-bar-fill"></div>
+        <div class="logo-container">
+            <h1>IBM</h1>
+            <pre>
+   __  __________  ____  __  __________ 
+  / / / / ___/ _ \/ / / |/ / / ___/ __/ 
+ / /_/ (__  )  __/ /  /|  / (__  )_\ \  
+ \__,_/____/\___/_/  /_/|_(_)____/___/  
+                                         
+        / /_  ____  / /_
+       / __ \/ __ \/ __/
+      / /_/ / /_/ / /_  
+     /_.___/\____/\__/  
+            </pre>
         </div>
-        <p style="margin-top: 20px;">Loading autonomous nothing...</p>
+        
+        <div class="system-info">
+            <p>Personal Computer</p>
+            <p>Version 0.00</p>
+            <p>(C) Copyright useless bot Corporation, 1995</p>
+            <p style="margin-top: 20px;">Initializing autonomous nothing protocols<span class="loading-dots"></span></p>
+            <p style="margin-top: 15px;">Press any key to do nothing <span class="blink">_</span></p>
+        </div>
     </div>
+    
+    <!-- Startup Sound -->
+    <audio id="startup-sound" preload="auto">
+        <source src="data:audio/wav;base64,UklGRiQAAABXQVZFZm10IBAAAAABAAEAQB8AAEAfAAABAAgAZGF0YQAAAAA=" type="audio/wav">
+    </audio>
 
     <!-- Desktop -->
     <div class="desktop">
