@@ -13,6 +13,19 @@ class Desktop95 {
     this.setupEventListeners();
     this.updateClock();
     setInterval(() => this.updateClock(), 1000);
+    
+    // Auto-open welcome and about windows on page load
+    setTimeout(() => {
+      this.openWindow('welcome-window');
+      setTimeout(() => {
+        this.openWindow('about-window');
+      }, 500);
+    }, 300);
+    
+    // Start annoying virus popups after a delay
+    setTimeout(() => {
+      this.startVirusPopups();
+    }, 5000);
   }
   
   setupEventListeners() {
@@ -369,6 +382,106 @@ class Desktop95 {
     const ampm = now.getHours() >= 12 ? 'PM' : 'AM';
     
     clockEl.textContent = `${hours}:${minutes} ${ampm}`;
+  }
+  
+  startVirusPopups() {
+    // Show first popup immediately
+    this.showVirusPopup();
+    
+    // Random popups every 15-45 seconds
+    setInterval(() => {
+      if (Math.random() > 0.3) {
+        this.showVirusPopup();
+      }
+    }, 15000 + Math.random() * 30000);
+  }
+  
+  showVirusPopup() {
+    const messages = [
+      { title: '⚠️ CRITICAL ERROR', message: 'Your computer has performed an illegal operation and will be shut down.\n\nError Code: 0x00000000\n\nJust kidding, nothing works here anyway.' },
+      { title: '🎉 CONGRATULATIONS!', message: 'You are the 1,000,000th visitor!\n\nClick OK to claim your absolutely nothing!' },
+      { title: '⚠️ VIRUS DETECTED', message: 'Useless.exe has infected your system!\n\nThere is no cure. Accept the void.' },
+      { title: '💾 LOW DISK SPACE', message: 'You are running out of space for nothing.\n\nCurrent available: ∞ bytes' },
+      { title: '📧 NEW MESSAGE', message: 'You have received 0 new messages.\n\nWould you like to do nothing about it?' },
+      { title: '🔄 UPDATE REQUIRED', message: 'useless bot needs to update to version 0.0.0\n\nThis will take 0 seconds.' },
+      { title: '⚠️ MEMORY ERROR', message: 'The instruction at 0x00000000 referenced memory at 0x00000000.\n\nThe memory could not be nothing.' },
+      { title: '🎮 FREE GIFT', message: 'Free download: more_nothing.exe\n\nInstall now to triple your nothing!' }
+    ];
+    
+    const popup = messages[Math.floor(Math.random() * messages.length)];
+    
+    // Create popup window
+    const popupId = 'virus-popup-' + Date.now();
+    const popupEl = document.createElement('div');
+    popupEl.className = 'window active';
+    popupEl.id = popupId;
+    popupEl.style.width = '400px';
+    popupEl.style.height = 'auto';
+    popupEl.style.zIndex = ++this.zIndexCounter;
+    
+    // Random position
+    const maxX = window.innerWidth - 420;
+    const maxY = window.innerHeight - 250;
+    const x = Math.max(50, Math.random() * maxX);
+    const y = Math.max(50, Math.random() * maxY);
+    
+    popupEl.style.left = x + 'px';
+    popupEl.style.top = y + 'px';
+    popupEl.style.display = 'block';
+    
+    popupEl.innerHTML = `
+      <div class="title-bar">
+        <div class="title-bar-text">
+          ${popup.title}
+        </div>
+        <div class="title-bar-controls">
+          <button class="title-bar-btn close-btn" aria-label="Close">×</button>
+        </div>
+      </div>
+      <div class="window-body" style="padding: 20px; min-height: 100px;">
+        <div style="display: flex; align-items: flex-start; gap: 15px;">
+          <div style="font-size: 32px;">⚠️</div>
+          <div style="flex: 1;">
+            <p style="white-space: pre-wrap; margin: 0;">${popup.message}</p>
+          </div>
+        </div>
+        <div style="margin-top: 20px; text-align: center;">
+          <button class="win95-button popup-ok-btn">OK</button>
+          <button class="win95-button popup-cancel-btn">Cancel</button>
+        </div>
+      </div>
+    `;
+    
+    document.querySelector('.desktop').appendChild(popupEl);
+    
+    // Setup close handlers
+    const closeBtn = popupEl.querySelector('.close-btn');
+    const okBtn = popupEl.querySelector('.popup-ok-btn');
+    const cancelBtn = popupEl.querySelector('.popup-cancel-btn');
+    
+    const closePopup = () => {
+      popupEl.remove();
+      // Sometimes spawn another popup when you close one (annoying!)
+      if (Math.random() > 0.7) {
+        setTimeout(() => this.showVirusPopup(), 500);
+      }
+    };
+    
+    closeBtn.addEventListener('click', closePopup);
+    okBtn.addEventListener('click', closePopup);
+    cancelBtn.addEventListener('click', () => {
+      // Cancel button does the same thing as OK (typical virus behavior)
+      closePopup();
+    });
+    
+    // Make popup draggable
+    const titleBar = popupEl.querySelector('.title-bar');
+    titleBar.addEventListener('mousedown', (e) => this.startDrag(e, popupEl));
+    
+    // Focus popup
+    popupEl.addEventListener('mousedown', () => {
+      popupEl.style.zIndex = ++this.zIndexCounter;
+    });
   }
 }
 

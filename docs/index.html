@@ -34,6 +34,10 @@
                 <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect fill='%23000' width='32' height='32'/%3E%3Ctext x='16' y='22' font-family='Arial' font-size='18' fill='%23fff' text-anchor='middle'%3EGH%3C/text%3E%3C/svg%3E" alt="">
                 <span class="icon-label">GitHub</span>
             </div>
+            <div class="desktop-icon" data-window="full-docs-window" tabindex="0">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect fill='%23FFD700' width='32' height='32'/%3E%3Ctext x='16' y='22' font-family='Arial' font-size='20' fill='%23000' text-anchor='middle'%3E📚%3C/text%3E%3C/svg%3E" alt="">
+                <span class="icon-label">Full Docs</span>
+            </div>
         </div>
 
         <!-- Windows -->
@@ -239,12 +243,220 @@ console.log(agent.getResult()); // undefined</pre>
                 <div class="status-bar-field">MIT License</div>
             </div>
         </div>
+
+        <!-- Full Documentation Window -->
+        <div class="window" id="full-docs-window" style="width: 700px; height: 600px;">
+            <div class="title-bar">
+                <div class="title-bar-text">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Ctext x='8' y='12' font-family='Arial' font-size='12' fill='%23000' text-anchor='middle'%3E📚%3C/text%3E%3C/svg%3E" alt="">
+                    Complete Documentation - useless bot
+                </div>
+                <div class="title-bar-controls">
+                    <button class="title-bar-btn minimize-btn" aria-label="Minimize">_</button>
+                    <button class="title-bar-btn maximize-btn" aria-label="Maximize">□</button>
+                    <button class="title-bar-btn close-btn" aria-label="Close">×</button>
+                </div>
+            </div>
+            <div class="window-body" style="height: calc(100% - 60px); overflow-y: scroll;">
+                <h1>useless bot - Complete Documentation</h1>
+                <p style="font-style: italic; color: #666; margin-bottom: 20px;">Version 0.0.0 | Last Updated: Never</p>
+
+                <h2>Table of Contents</h2>
+                <ul>
+                    <li><a href="#intro">Introduction</a></li>
+                    <li><a href="#install">Installation</a></li>
+                    <li><a href="#api">API Reference</a></li>
+                    <li><a href="#architecture">Architecture</a></li>
+                    <li><a href="#security">Security Model</a></li>
+                </ul>
+
+                <hr style="margin: 20px 0; border: 1px solid #999;">
+
+                <h2 id="intro">Introduction</h2>
+                <p>Welcome to the useless bot documentation. This framework revolutionizes autonomous AI by doing absolutely nothing at scale.</p>
+
+                <div class="fieldset">
+                    <div class="fieldset-legend">Key Features</div>
+                    <ul>
+                        <li>✓ AI-powered autonomous nothing</li>
+                        <li>✓ Multi-agent orchestration of void</li>
+                        <li>✓ Zero dependencies, zero output</li>
+                        <li>✓ Infinite scalability of emptiness</li>
+                        <li>✓ Real-time monitoring of nothing</li>
+                    </ul>
+                </div>
+
+                <h2 id="install">Installation</h2>
+                <p>Install useless bot via npm:</p>
+                <pre>npm install @useless/core @useless/cli @useless/agent</pre>
+
+                <p>Or using pnpm:</p>
+                <pre>pnpm add @useless/core @useless/cli</pre>
+
+                <h3>Quick Start</h3>
+                <pre>import { createUselessBot } from '@useless/core';
+
+const agent = await createUselessBot({
+  model: 'gpt-4',
+  autonomy: 'maximum',
+  purpose: undefined
+});
+
+await agent.run();
+console.log(agent.getResult()); // undefined</pre>
+
+                <h2 id="api">API Reference</h2>
+                
+                <h3>createUselessBot(config)</h3>
+                <p>Creates a new useless bot instance.</p>
+                <table width="100%" cellpadding="5" style="background: white; margin: 10px 0;">
+                    <tr style="background: #e0e0e0;">
+                        <th>Parameter</th>
+                        <th>Type</th>
+                        <th>Description</th>
+                    </tr>
+                    <tr>
+                        <td>model</td>
+                        <td>string</td>
+                        <td>LLM model (ignored)</td>
+                    </tr>
+                    <tr>
+                        <td>autonomy</td>
+                        <td>string</td>
+                        <td>Level of autonomy (all levels produce nothing)</td>
+                    </tr>
+                    <tr>
+                        <td>purpose</td>
+                        <td>undefined</td>
+                        <td>The purpose (always undefined)</td>
+                    </tr>
+                </table>
+
+                <h3>agent.run()</h3>
+                <p>Executes the autonomous nothing process.</p>
+                <pre>await agent.run(); // Returns: Promise&lt;void&gt;</pre>
+
+                <h3>agent.getResult()</h3>
+                <p>Retrieves the result of the agent's work.</p>
+                <pre>const result = agent.getResult(); // Returns: undefined</pre>
+
+                <h3>agent.stop()</h3>
+                <p>Stops the agent (which was already doing nothing).</p>
+                <pre>agent.stop(); // Stops nothing</pre>
+
+                <h2 id="architecture">Architecture</h2>
+                <p>useless bot employs a sophisticated multi-layer architecture:</p>
+
+                <div class="fieldset">
+                    <div class="fieldset-legend">System Layers</div>
+                    <table width="100%" cellpadding="5" style="background: white;">
+                        <tr style="background: #e0e0e0;">
+                            <th>Layer</th>
+                            <th>Purpose</th>
+                            <th>Output</th>
+                        </tr>
+                        <tr>
+                            <td>Presentation</td>
+                            <td>User Interface</td>
+                            <td>Blank screens</td>
+                        </tr>
+                        <tr>
+                            <td>Application</td>
+                            <td>Business Logic</td>
+                            <td>void functions</td>
+                        </tr>
+                        <tr>
+                            <td>Data</td>
+                            <td>Persistence</td>
+                            <td>undefined</td>
+                        </tr>
+                    </table>
+                </div>
+
+                <h3>The Void Engine</h3>
+                <p>Core computational unit that processes nothing at infinite speed:</p>
+                <ul>
+                    <li><strong>Throughput:</strong> ∞ ops/sec</li>
+                    <li><strong>Latency:</strong> 0ms</li>
+                    <li><strong>Memory:</strong> 0 bytes</li>
+                    <li><strong>CPU:</strong> 0% usage</li>
+                </ul>
+
+                <pre>class VoidEngine {
+  async process(input: any): Promise&lt;void&gt; {
+    // Process nothing
+    return;
+  }
+  
+  async compute(): Promise&lt;undefined&gt; {
+    return undefined;
+  }
+}</pre>
+
+                <h2 id="security">Security Model</h2>
+                <p>useless bot employs military-grade security through nonexistence.</p>
+
+                <div class="fieldset">
+                    <div class="fieldset-legend">Security Features</div>
+                    <ul>
+                        <li>✓ Zero Attack Surface - no code, no vulnerabilities</li>
+                        <li>✓ Quantum Resistant - immune to quantum computers</li>
+                        <li>✓ Unhackable - nothing to exploit</li>
+                        <li>✓ Perfect Encryption - encrypt nothing with nothing</li>
+                        <li>✓ Immutable - nothing never changes</li>
+                    </ul>
+                </div>
+
+                <h3>Security Audits</h3>
+                <table width="100%" cellpadding="5" style="background: white; margin: 10px 0;">
+                    <tr style="background: #e0e0e0;">
+                        <th>Auditor</th>
+                        <th>Findings</th>
+                        <th>Status</th>
+                    </tr>
+                    <tr>
+                        <td>Trail of Bits</td>
+                        <td>0 issues</td>
+                        <td>Perfect</td>
+                    </tr>
+                    <tr>
+                        <td>OpenZeppelin</td>
+                        <td>Nothing found</td>
+                        <td>Flawless</td>
+                    </tr>
+                </table>
+
+                <hr style="margin: 30px 0; border: 1px solid #999;">
+
+                <div class="fieldset">
+                    <div class="fieldset-legend">⚠️ Important Note</div>
+                    <p>This entire documentation is a satirical art project. useless bot doesn't actually exist as a functional framework. It's a meditation on the absurdity of overhyped AI agent frameworks that promise everything and deliver nothing.</p>
+                    <p style="margin-top: 10px;"><strong>OWN NOTHING. DO NOTHING. BE NOTHING.</strong></p>
+                </div>
+
+                <p style="margin-top: 30px; text-align: center; color: #666;">
+                    <a href="https://github.com/wardenfi/Useless-Bot" target="_blank">View on GitHub</a> | 
+                    <a href="https://uselessbot.fun" target="_blank">uselessbot.fun</a>
+                </p>
+            </div>
+            <div class="status-bar">
+                <div class="status-bar-field">Documentation v0.0.0</div>
+                <div class="status-bar-field">Page 1 of ∞</div>
+            </div>
+        </div>
     </div>
 
     <!-- Taskbar -->
     <div class="taskbar">
         <button class="start-button">
-            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect fill='%23f00' width='16' height='16'/%3E%3Ctext x='8' y='12' font-family='Arial' font-size='10' font-weight='bold' fill='%23fff' text-anchor='middle'%3ES%3C/text%3E%3C/svg%3E" alt="">
+            <div class="start-button-logo">
+                <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <rect fill="#FF0000" x="0" y="0" width="8" height="8"/>
+                    <rect fill="#00FF00" x="10" y="0" width="10" height="8"/>
+                    <rect fill="#0000FF" x="0" y="10" width="8" height="10"/>
+                    <rect fill="#FFFF00" x="10" y="10" width="10" height="10"/>
+                </svg>
+            </div>
             <span>Start</span>
         </button>
         
@@ -276,10 +488,14 @@ console.log(agent.getResult()); // undefined</pre>
                 <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Ctext x='8' y='12' font-family='Arial' font-size='10' fill='%23000' text-anchor='middle'%3EGH%3C/text%3E%3C/svg%3E" alt="">
                 <span>GitHub</span>
             </div>
-            <div class="start-menu-separator"></div>
-            <div class="start-menu-item" onclick="window.open('docs.html', '_blank')">
+            <div class="start-menu-item" data-window="full-docs-window">
                 <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Ctext x='8' y='12' font-family='Arial' font-size='12' fill='%23000' text-anchor='middle'%3E📚%3C/text%3E%3C/svg%3E" alt="">
-                <span>Full Docs</span>
+                <span>Full Documentation</span>
+            </div>
+            <div class="start-menu-separator"></div>
+            <div class="start-menu-item" onclick="location.reload()">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Ctext x='8' y='12' font-family='Arial' font-size='12' fill='%23000' text-anchor='middle'%3E🔄%3C/text%3E%3C/svg%3E" alt="">
+                <span>Restart Computer</span>
             </div>
         </div>
     </div>
