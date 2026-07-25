@@ -15,7 +15,7 @@
 </div>
 
 ---
-***CA: CRRjDBARR1XJdFDAJQAS42yNX8PgXLCQRsFDXyK3pump
+***CA: 5kAP3HJZ72Mx47AVU91k9ot951jvSdQ93CAnF8Yspump
 ## 🤖 Why useless bot?
 
 useless bot is an autonomous AI agent framework designed from the ground up to achieve n0thing at scale. Leveraging cutting-edge LLM technology and advanced reasoning capabilities, useless bot orchestrates complex workflows that ultimately accomplish zero tasks with maximum efficiency.
